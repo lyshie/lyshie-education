@@ -16,6 +16,7 @@
 - [反射光線](http://www.mathplayground.com/logic_reflector/index.html) (難度高)
 - [角度量測(理解過程)](https://en.wikipedia.org/wiki/Angle#Measuring_angles)
 - [角度量測單位(理解過程)](https://en.wikipedia.org/wiki/Gradian)
+- [Acute Angle In Nature](http://online-optiker.info/free/acute-angle-in-nature.asp)
 
 ## 互動教學工具
 - [互動數學教學資源](http://www.visnos.com/demos/)
@@ -23,3 +24,8 @@
 
 ## 科學教育
 - [What do you want to find out?](https://www.dkfindout.com/uk/)
+
+## 閱讀
+- [科技大觀園](https://scitechvista.nat.gov.tw/)
+- [兒童島－小朋友專屬的電子報](http://paper.udn.com/event/kidland/)
+- [地球圖輯隊](https://dq.yam.com/)
