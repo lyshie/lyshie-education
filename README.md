@@ -7,7 +7,7 @@
 ## 周長與面積
 - [周長與面積對戰遊戲](http://www.mathplayground.com/area_blocks.html)
 
-## 角度遊戲)
+## 角度遊戲
 - [垂直與平行](https://www.mathsisfun.com/perpendicular-parallel.html)
 - [互動角度示範](https://www.mathsisfun.com/angles.html)
 - [角度估算](http://www.mathplayground.com/alienangles.html)
