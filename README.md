@@ -3,6 +3,9 @@
 ## 運算
 - [減法工作表](http://www.math-aids.com/Subtraction/)
 - [除法分配互動教學](https://www.mathsisfun.com/numbers/division.html)
+- [直式乘法計算](https://www.calculatorsoup.com/calculators/math/longmultiplication.php)
+  * Long Multiplication (演算方法一)
+  * Lattice Method (演算方法二)
 
 ## 幾何
 - [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
@@ -24,6 +27,7 @@
 ## 互動教學工具
 - [互動數學教學資源](http://www.visnos.com/demos/)
 - [視覺互動三角函數](https://www.visualtrig.com/) 
+- [Education.com](https://www.education.com/)
 
 ## 科學教育
 - [What do you want to find out?](https://www.dkfindout.com/uk/)
