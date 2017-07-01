@@ -4,6 +4,9 @@
 - [減法工作表](http://www.math-aids.com/Subtraction/)
 - [除法分配互動教學](https://www.mathsisfun.com/numbers/division.html)
 
+## 幾何
+- [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
+
 ## 周長與面積
 - [周長與面積對戰遊戲](http://www.mathplayground.com/area_blocks.html)
 
@@ -29,3 +32,9 @@
 - [科技大觀園](https://scitechvista.nat.gov.tw/)
 - [兒童島－小朋友專屬的電子報](http://paper.udn.com/event/kidland/)
 - [地球圖輯隊](https://dq.yam.com/)
+
+## 遊戲
+- [立體連鎖](http://mypuzzle.org/interlocked)
+- [找出20個壽司](http://armorgames.com/play/18083/cat-in-japan)
+- [填色遊戲](http://www.hoodamath.com/games/floodfill.html)
+- [Earth-Picker 看街景猜地方](http://www.earth-picker.com/)
