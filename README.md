@@ -4,6 +4,7 @@
 - [減法工作表](http://www.math-aids.com/Subtraction/)
 - [除法分配互動教學](https://www.mathsisfun.com/numbers/division.html)
 - [直式乘法計算](https://www.calculatorsoup.com/calculators/math/longmultiplication.php)
+- [乘法演算過程](https://goo.gl/ovwQMU)
   * Long Multiplication (演算方法一)
   * Lattice Method (演算方法二)
 
