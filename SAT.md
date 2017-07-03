@@ -11,3 +11,8 @@
 
 ### If-Then-Else (ITE)
     (if x then y else z) ≡ (x ∧ y) ∨ (¬x ∧ z)
+
+### Modern SAT Solver
+- DPLL (Davis–Putnam–Loveland–Logemann)
+  * better@2007
+- stochastic search
