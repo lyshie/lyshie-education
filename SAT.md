@@ -5,6 +5,7 @@
 - [MiniSAT User Guide: How to use the MiniSAT SAT Solver](https://www.dwheeler.com/essays/minisat-user-guide.html)
 - [SAT solving, SMT solving and Program Verification](http://www.win.tue.nl/mdseminar/pres/zantema-17-02-11.pdf)
 - [Decision Procedures for Propositional Logic](https://cse.unl.edu/~tnguyen/class/csce990/ch2.pdf)
+- [How to Convert a Formula to CNF](https://www.cs.jhu.edu/~jason/tutorials/convert-to-CNF.html)
 
 ## CNF (Dimacs Format)
 - [CNF – Conjunctive Normal Form (Dimacs format) Explained](https://fairmut3x.wordpress.com/2011/07/29/cnf-conjunctive-normal-form-dimacs-format-explained/)
