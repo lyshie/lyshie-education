@@ -17,3 +17,6 @@
 - DPLL (Davis–Putnam–Loveland–Logemann)
   * better@2007
 - stochastic search
+
+## 補充資料
+- [不確定多項式時間之完成問題 (NPC Problem)](https://cg2010studio.com/2011/05/27/npc-problem/)
