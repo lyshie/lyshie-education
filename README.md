@@ -8,6 +8,16 @@
   * Long Multiplication (演算方法一)
   * Lattice Method (演算方法二)
 
+## 分數
+- [分數表示](http://www.mathplayground.com/puzzle_pics_fractions.html)
+- [分數相等](http://www.mathplayground.com/Fraction_bars.html)
+- [分數相等](http://www.mathplayground.com/visual_fractions.html)
+- [分數相加](http://www.mathplayground.com/GapZappers/Gap_Zappers.html)
+
+## 小數
+- [小數加法](http://www.mathplayground.com/ASB_Hungry_Puppies_Decimals.html)
+- [小數加法](http://www.sheppardsoftware.com/mathgames/decimals/matchingDecimalsAdd.htm)
+
 ## 幾何
 - [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
 
@@ -33,6 +43,9 @@
 
 ## 科學教育
 - [What do you want to find out?](https://www.dkfindout.com/uk/)
+
+## 數學工具
+- [Math Worksheets](https://www.math-drills.com/)
 
 ## 閱讀
 - [科技大觀園](https://scitechvista.nat.gov.tw/)
