@@ -45,7 +45,9 @@
 - [What do you want to find out?](https://www.dkfindout.com/uk/)
 - [The Abbey Catholic Primary School Key Stage 2 Mathematics Scheme of Work](http://www.abbeyrc.bham.sch.uk/pdfs/maths-ks2.pdf)
 
-基數排序 (Radix Sort)，位數大小比較
+## 數感
+- [基數排序 (Radix Sort)，位數大小比較](https://quizizz.com/admin/quiz/595e439ad582151000da89a2)
+- [快速估算](https://quizizz.com/admin/quiz/595e3916b58ae11100421785)
 
 ## 數學工具
 - [Math Worksheets](https://www.math-drills.com/)
