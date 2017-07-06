@@ -43,6 +43,7 @@
 
 ## 科學教育
 - [What do you want to find out?](https://www.dkfindout.com/uk/)
+- [The Abbey Catholic Primary School Key Stage 2 Mathematics Scheme of Work](http://www.abbeyrc.bham.sch.uk/pdfs/maths-ks2.pdf)
 
 ## 數學工具
 - [Math Worksheets](https://www.math-drills.com/)
