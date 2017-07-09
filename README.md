@@ -20,6 +20,8 @@
 
 ## 幾何
 - [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
+- [三角形組合](https://nrich.maths.org/5942)
+- [三角形邊長組合](https://www.pbslearningmedia.org/resource/mgbh.math.g.linktriangle/constructing-triangles/#.WWHyhnV941I)
 
 ## 周長與面積
 - [周長與面積對戰遊戲](http://www.mathplayground.com/area_blocks.html)
@@ -49,9 +51,11 @@
 ## 數感
 - [基數排序 (Radix Sort)，位數大小比較](https://quizizz.com/admin/quiz/595e439ad582151000da89a2)
 - [快速估算](https://quizizz.com/admin/quiz/595e3916b58ae11100421785)
+- [三邊數字和](http://www.mathplayground.com/magic_triangle.html)
 
 ## 數學工具
 - [Math Worksheets](https://www.math-drills.com/)
+- [互動數學](http://www.learner.org/interactives/?d[]=MATH)
 
 ## 閱讀
 - [科技大觀園](https://scitechvista.nat.gov.tw/)
