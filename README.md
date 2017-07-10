@@ -49,6 +49,7 @@
 - [The Abbey Catholic Primary School Key Stage 2 Mathematics Scheme of Work](http://www.abbeyrc.bham.sch.uk/pdfs/maths-ks2.pdf)
 
 ## 數感
+- [Number Sense and Place Value](https://nrich.maths.org/10712)
 - [基數排序 (Radix Sort)，位數大小比較](https://quizizz.com/admin/quiz/595e439ad582151000da89a2)
 - [快速估算](https://quizizz.com/admin/quiz/595e3916b58ae11100421785)
 - [三邊數字和](http://www.mathplayground.com/magic_triangle.html)
