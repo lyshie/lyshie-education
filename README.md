@@ -14,6 +14,7 @@
 - [分數相等](http://www.mathplayground.com/visual_fractions.html)
 - [分數相加](http://www.mathplayground.com/GapZappers/Gap_Zappers.html)
 - [相等分數](http://www.mathplayground.com/Triplets/Triplets.html)
+- [分數等級](http://www.mathplayground.com/Scale_Fractions.html)
 
 ## 小數
 - [小數加法](http://www.mathplayground.com/ASB_Hungry_Puppies_Decimals.html)
