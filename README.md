@@ -62,6 +62,8 @@
 - [科技大觀園](https://scitechvista.nat.gov.tw/)
 - [兒童島－小朋友專屬的電子報](http://paper.udn.com/event/kidland/)
 - [地球圖輯隊](https://dq.yam.com/)
+- [HyRead ebook 臺南市立圖書館圖書館](https://tnml.ebook.hyread.com.tw/)
+- [台灣雲端書庫@臺南](http://lib.ebookservice.tw/tn/)
 
 ## 遊戲
 - [立體連鎖](http://mypuzzle.org/interlocked)
