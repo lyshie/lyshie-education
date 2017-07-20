@@ -60,6 +60,7 @@
 - [基數排序 (Radix Sort)，位數大小比較](https://quizizz.com/admin/quiz/595e439ad582151000da89a2)
 - [快速估算](https://quizizz.com/admin/quiz/595e3916b58ae11100421785)
 - [三邊數字和](http://www.mathplayground.com/magic_triangle.html)
+- [估算遊戲 Estimation Games](https://www.mathsisfun.com/numbers/estimation-game.php)
 
 ## 數學工具
 - [Math Worksheets](https://www.math-drills.com/)
