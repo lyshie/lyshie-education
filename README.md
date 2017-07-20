@@ -33,6 +33,7 @@
 - [垂直與平行](https://www.mathsisfun.com/perpendicular-parallel.html)
 - [互動角度示範](https://www.mathsisfun.com/angles.html)
 - [角度估算](http://www.mathplayground.com/alienangles.html)
+- [角度估算](https://nrich.maths.org/1235)
 - [使用量角器](https://www.mathplayground.com/measuringangles.html)
 - [使用量角器](https://www.mathsisfun.com/geometry/protractor-using.html)
 - [形狀拼圖](http://www.mathplayground.com/mobile/shapeinlay_fullscreen.htm) 
