@@ -79,3 +79,5 @@
 
 ## 數學文獻
 - [小數乘法的學與教](http://www.sec.ntnu.edu.tw/Monthly/96(296-305)/297-pdf/05.pdf)
+- [What Makes Learning Fractions So Hard? (part 1)](http://www.cne.psychol.cam.ac.uk/math-memory/what-makes-learning-fractions-so-hard-part-1)
+- [Why is learning fraction and decimal arithmetic so difficult?](http://www.psy.cmu.edu/~siegler/2015-LF-etal.pdf)
