@@ -26,6 +26,10 @@
 - [三角形組合](https://nrich.maths.org/5942)
 - [三角形邊長組合](https://www.pbslearningmedia.org/resource/mgbh.math.g.linktriangle/constructing-triangles/#.WWHyhnV941I)
 - [Shape: Quadrilateral](http://thinkmath.edc.org/resource/shape-quadrilateral)
+- Two lines
+  - Intersect
+  - Perpendicular
+  - Parallel
 
 ## 周長與面積
 - [周長與面積對戰遊戲](http://www.mathplayground.com/area_blocks.html)
