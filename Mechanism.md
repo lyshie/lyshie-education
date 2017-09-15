@@ -13,7 +13,7 @@
 # Four-Bar Linkages
 - [Four-Bar Linkages](http://dynref.engr.illinois.edu/aml.html)
 - [模擬器](http://dynref.engr.illinois.edu/aml.html#aml-sl)
-
+- [Parallel Motion Linkage](http://wiki.dtonline.org/index.php/Parallel_Motion_Linkage)
 
 ## Kinematics: Grashof Criterion
 - [Kinematics: Grashof Criterion](http://mechdesigner.support/index.htm?md-kinematics-grashoff-criterion.htm)
