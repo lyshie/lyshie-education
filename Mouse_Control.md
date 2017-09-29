@@ -6,3 +6,10 @@
 # Pixel
 - [Make Pixel Art](http://makepixelart.com/free/#)
 - [Textcraft](https://textcraft.net/)
+
+# CS Games
+- [戰艦遊戲](http://showcase.codethislab.com/games/battleship_war/)
+- [穿越直線](https://dev-zoom.com/construct-game/break-the-line/)
+- [太空軌道](https://previews.envatousercontent.com/files/233393752/index.html)
+- [銷毀](https://previews.envatousercontent.com/files/233115027/index.html)
+- [河內塔](http://preview.codecanyon.net/item/towers-of-hanoi-html5-canvas-game/full_screen_preview/20574251)
