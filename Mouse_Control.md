@@ -13,6 +13,7 @@
 - [太空軌道](https://previews.envatousercontent.com/files/233393752/index.html)
 - [銷毀](https://previews.envatousercontent.com/files/233115027/index.html)
 - [河內塔](http://preview.codecanyon.net/item/towers-of-hanoi-html5-canvas-game/full_screen_preview/20574251)
+- [七段顯示器模擬器](http://www.uize.com/examples/seven-segment-display.html)
 
 # 遊戲來源
 - [HTML5 Games from CodeCanyon](https://codecanyon.net/category/html5/games)
