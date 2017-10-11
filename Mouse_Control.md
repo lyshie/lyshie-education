@@ -3,6 +3,9 @@
 - [Bees and Honey (滑鼠點擊準確度)](http://tvokids.com/preschool/games/bees-and-honey)
 - [Great Games and Websites for learning to use the computer mouse!](http://nestechparents.blogspot.tw/)
 
+# Keyboard
+- [Keyboard](http://www.bigbrownbear.co.uk/keyboard/)
+
 # Pixel
 - [Make Pixel Art](http://makepixelart.com/free/#)
 - [Textcraft](https://textcraft.net/)
