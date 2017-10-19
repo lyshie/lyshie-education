@@ -11,3 +11,6 @@
 
 ## 數位資源
 - [國立公共資訊圖書館](http://ers.nlpi.edu.tw/idsermpl/)
+
+## 語言
+- [Free Text to Speech Online with Natural Voices](https://www.naturalreaders.com/online/)
