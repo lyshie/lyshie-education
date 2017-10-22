@@ -5,6 +5,7 @@
 
 # Keyboard
 - [Keyboard](http://www.bigbrownbear.co.uk/keyboard/)
+- [Emojist 表情符號](http://emojist.com/)
 
 # Pixel
 - [Make Pixel Art](http://makepixelart.com/free/#)
@@ -20,3 +21,10 @@
 
 # 遊戲來源
 - [HTML5 Games from CodeCanyon](https://codecanyon.net/category/html5/games)
+
+# 放輕鬆
+- [立體連鎖](http://mypuzzle.org/interlocked)
+- [找出20個壽司](http://armorgames.com/play/18083/cat-in-japan)
+- [填色遊戲](http://www.hoodamath.com/games/floodfill.html)
+- [Androidify](https://www.androidify.com/)
+- [Numpty Physics 物理遊戲](https://lgdb.org/game/numpty_physics)
