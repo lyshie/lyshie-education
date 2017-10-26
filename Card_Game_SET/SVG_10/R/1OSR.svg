@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg10"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;rZRNb4MwDIZ/DXcgKxvXsrJdduph5yy4EDVgFNJB9+sXwOFDtNImNQeUPHYS+7WDx5Kye9O8Lj4wA+WFftZ57NULw5en2H57cB3Bzo9GkGuZjSiYwVH+AEGf6EVm0KwcDaIysl5DgVUFwqwY1xrbtdsJ1frWmuewAUfB1ZZ+yswUlFb4PPN3kHnhbg4iSviLi3Ou8VLRfV7ITsMYzSV3Z1GiTcEzbBeIHTyWaEQzzsouAdVL62Qb96V3rFPcGirzlw3huOGbqwu4iIe4zNVpMWQDvX/gsX1bSAPHmove2triW1aYUpG5MRrPkKBCPexm/jAmi1Oz9z1JpRaeqR1JYjmFBNpAdzetYBLL9iBgCUZfrUu37iNqvyCidbsoJqFiWUefIKf+yaeTZw3thGS8LSl7tKSuRXoVBZZS0Pym1mm60ZpttZ48c80zaUV1tgorG8Wea0GPcuc/qCLxuiJxvKlIFG4r4sT7R0Hscn4/g23xj2KHXw==&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g8"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <rect
+       id="rect6"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ff0000"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="39"
+       x="9" />
+  </g>
+</svg>

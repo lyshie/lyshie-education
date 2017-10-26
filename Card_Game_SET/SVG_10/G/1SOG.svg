@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg10"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;rVTBbqswEPwarhHYTdp3bGjTHlqpUg7v7MAGrBoWGaeQfn1tvA6gJGor1Qdkz+za3pk1EU+r/kmLpnzFHFTE4ryP+EPE2N3NP/t1wNEDy3jlgULL3EPJCGzlJxAYE3qQObSzQIOojGzmYIZ1DZmZYUJr7OZhe1TzUxtRwBmwzYQ6R//L3JRUFrsd8WeQRRlOTlZU8E5k74XGQ03nRYzvh+HpSoS9qNC2FDl2E4g/RjzViMbPqj4F5aQNsvm8zRX2dG8NtflJAvMJH0IdINx4uJc5Bi2GasDFJxFfd6U0sG1E5tjOmm+x0lSK6NZofIcUFeohm8fDODFBTRe7l0pNIjd2pKnF6UqgDfRXy0pOYtkeBKzA6KMNoYTlkvyg/mN3pHc3cZOgcmpkTKCgBipOW48i2gnpeFlT/r2mrjhp2+1F7EC9YSuNxNpSOzQGK6tBCLhXsnCEwYtCBzm5Q0rRuO2rvnBvcrETrcwWnfgAK9R6eInxwgWOhsY+zXegW2RYyYzmF+zZWAXWdvdcWh8CV2MN15wfEv7Cz9XcT87O/Vwl536y39tpl+PzG7jJL44/fgE=&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g8"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <path
+       id="path6"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#00ff00"
+       fill="#ffffff"
+       d="M 10 43 Q 20.17 37.6 30.33 43 Q 40.5 48.4 50.67 43 Q 60.83 37.6 71 43 L 71 57 Q 60.83 51.6 50.67 57 Q 40.5 62.4 30.33 57 Q 20.17 51.6 10 57 Z" />
+  </g>
+</svg>

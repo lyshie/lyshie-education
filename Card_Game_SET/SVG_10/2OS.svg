@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg12"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7ZVNc4IwEIZ/DXdIlNqrtLSXnjz0nMIKGQPLxFiwv74BNnwUnXGm9tYcnPDuLtl93qgej4rmRYsqf8MUlMf8tPH4k8fYZvVoP1vh3AtrP+yFTMu0l4JR2MkvINEn9SRTOM4SDaIyspqLCZYlJGamCa2xnqftUc1PrUQGC2GXCLVU32VqchqLPYz6K8gsdycHIQ38IZJDpvFU0nke4/tu9eFCuHfRoMdcpFhPJP7s8Ugjmn5XNBGoFq3D1tfFV6JD3xpKc0sB6ws+hTqB67jry5wdi24aaPMDj2/rXBrYVSJpo7U132q5KRSFj0bjASJUqLtq7ndriDiabe5eKjXJjO2KIqtTS6ANNFfHCgZY9g4CFmD02aa4Ap/40v0LQnquJ26SlE+NdHWCLlA2vHqEaDfE8TJTfm+m7o60GBMsZEL7i7DjeAGbL2EPmZkWqbRUXazE0naxFTqhb+Xav5MlwQ9LNquFJSFbWuLo/caR1b8jNzjCgvVfOWIfx9+0Ljb53+DP3w==&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g10"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <rect
+       id="rect6"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#0000ff"
+       fill="#0000ff"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="24"
+       x="10" />
+    <rect
+       id="rect8"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#0000ff"
+       fill="#0000ff"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="55"
+       x="10" />
+  </g>
+</svg>

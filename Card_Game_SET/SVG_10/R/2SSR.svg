@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg12"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7VXBUoMwEP0arh0gWuvRYqsHnXGmB88pbCFjYJmQCvXrTcimgLWjB3szBya8t5tk39tAwJKye1C8Lp4xAxnEYdYF7D6I48XVrXla4OCA63DugFyJzEHRAGzEBxAYEroXGTSTQI0otainYIpVBameYFwpbKdhO5TTXWuewwmwSbk8RV9FpgsqK74Z8EcQeeF3juZU8Janb7nCfUX7BTHb9cPRJfdrUaFNwTNsRxBbBSxRiNrNyi4BaaX1srm89Rn2eG4Flf5NQuwS3rncgz9xfy598Fr01YCNjwK2bAuhYVPz1LKtMd9ghS4l0Y1W+AYJSlR9Ngv7cWS8mjZ2J6QcRa7NSBKD05FAaejOlhUdxTI9CFiCVgcT4hNCSqH+ixekdztyk6BibGRIIKcGyo9LDyKaCen4vabsZ01tccK02xPfgnzBRmiBlaG2qDWWRgMfcCdFbgmN3wrt5WQWKXhtly+73N7J2ZY3Ip21/B2MUMv+JoYzGzgYGro014H2JcVSpDT/Yo+1cW0UWJrVM2F88FyFFZxzvk/4Cz/9h4H8ZOzUz3l06mf8B3Ze/dt5cTuji9lpXoevac+N/lhs9Qk=&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g10"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <path
+       id="path6"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ff0000"
+       d="M 9 53 Q 19.17 47.6 29.33 53 Q 39.5 58.4 49.67 53 Q 59.83 47.6 70 53 L 70 67 Q 59.83 61.6 49.67 67 Q 39.5 72.4 29.33 67 Q 19.17 61.6 9 67 Z" />
+    <path
+       id="path8"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ff0000"
+       d="M 9 33 Q 19.17 27.6 29.33 33 Q 39.5 38.4 49.67 33 Q 59.83 27.6 70 33 L 70 47 Q 59.83 41.6 49.67 47 Q 39.5 52.4 29.33 47 Q 19.17 41.6 9 47 Z" />
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg14"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7VU9b4MwEP017GAT0q6hoV06ZejsGgesGA45TiH99TVw5qMkUqRGneIhct69s+/eO2SPxkXzqlmVv0MqlEf8tPHoi0fIU/hsf1vg3AMrP+qBTMu0h4IR2MlvgaCP6Emm4jgjGgBlZDUHOZSl4GaGMa2hntP2oOa3ViwTC2DHmVqiHzI1ObZF1iP+JmSWu5uDCBv+ZPyQaTiVeJ9H6L5bfbhg7ixs9JizFOoJRLcejTWA6XdFEwvVSutk6/OSK9Ghbi1Kc0sC6RO+mDoJV3FXlzk7LbpuRMsPPLqpc2nErmK8jdbWfIvlplAYPhoNBxGDAt1lU79bQ8Sp2XL3UqkJM7Erji2OJQltRHO1rWAQy86ggEIYfbYUTFhT9APnL4jwiHriJlqQT430EWQ4QNlw9Cii3aCOlzWl99bUzUgrI4dCctxfFDtJFmLTy2J3zEyzVFpVXayE0laxYZrjV7ny72RJ+MuSdbiwJCJLS5x6f3EkfDhygyPEDf8/OLJ6OHKLI+7Bub8j9u/4ynSxyUtOtz8=&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g12"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <rect
+       id="rect6"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#00ff00"
+       fill="#ffffff"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="13"
+       x="10" />
+    <rect
+       id="rect8"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#00ff00"
+       fill="#ffffff"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="39"
+       x="10" />
+    <rect
+       id="rect10"
+       pointer-events="none"
+       stroke-width="3"
+       stroke="#00ff00"
+       fill="#ffffff"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="66"
+       x="10" />
+  </g>
+</svg>

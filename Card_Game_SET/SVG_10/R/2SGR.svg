@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg17"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7VVNU4MwEP01XDtAaq1Hi1YPOuNMD55T2ELGwDIhFeqvd/NBAVtHD+rJHJjw3m6SfW8DAUvK7k7xunjEDGQQh1kXsJsgjpfzK3oa4OCAi3DhgFyJzEHRAGzEG3gw9OheZNBMAjWi1KKegilWFaR6gnGlsJ2G7VBOd615DifAJuXyFH0WmS58WfHlgN+DyIt+52jhC97y9CVXuK/8fkHMdnY4uuT9Wr7QpuAZtiOI3QYsUYjazcouAWmk7WVzeetP2OO5FVT6OwmxS3jlcg/9ie259KHXwlYDJj4K2KothIZNzVPDtmQ+YYUupacbrfAFEpSobDYL7TgyvZomdiekHEWuaSQJ4f5IoDR0n5YVHcWiHgQsQasDhfgEdnnhUnz/xUuvdzty00PF2MjQg9w3UH5cehCRJl7H85qyrzU1xQlqtwe+BfmEjdACK6K2qDWWpEEfcC1FbgiNZ4Uey0mtVJvlyy43d3K25Y1IZy1/BRJqZW9iOGM0HQwNXZrrQPOSYilSPz9jz5oUWNHqmSAfPphsubP2W+YnTF3OJ6YydmrqIjo1Nf4BT+f/nv6Np9GveUqvw3fVcqN/F7t9Bw==&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="mx-gradient-ffffff-1-ff0000-1-s-0"
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%">
+      <stop
+         id="stop2"
+         style="stop-color:#FFFFFF"
+         offset="0%" />
+      <stop
+         id="stop4"
+         style="stop-color:#FF0000"
+         offset="100%" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g15"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect9"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <path
+       id="path11"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke="#ff0000"
+       fill="url(#mx-gradient-ffffff-1-ff0000-1-s-0)"
+       d="M 9 53 Q 19.17 47.6 29.33 53 Q 39.5 58.4 49.67 53 Q 59.83 47.6 70 53 L 70 67 Q 59.83 61.6 49.67 67 Q 39.5 72.4 29.33 67 Q 19.17 61.6 9 67 Z" />
+    <path
+       id="path13"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke="#ff0000"
+       fill="url(#mx-gradient-ffffff-1-ff0000-1-s-0)"
+       d="M 9 33 Q 19.17 27.6 29.33 33 Q 39.5 38.4 49.67 33 Q 59.83 27.6 70 33 L 70 47 Q 59.83 41.6 49.67 47 Q 39.5 52.4 29.33 47 Q 19.17 41.6 9 47 Z" />
+  </g>
+</svg>

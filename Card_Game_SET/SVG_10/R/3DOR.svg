@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg14"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;3ZVNc4IwEEB/DXcgivZaKu2lJw89R1hJxsAyIRTsr2+A5WvUGafj9GAODLzdJdmXKA4Ls+Zd80J8YgLK8d2kcdib4/vb1Yu9tuDcg7Ub9CDVMumRN4G9/AGCLtFKJlAuEg2iMrJYwhjzHGKzYFxrrJdpR1TLWQuewgXYx1xd0i+ZGEFt+ZuJf4BMxTCzF1DDBx6fUo1VTvM5Pjt2ow9nfHgXNVoKnmA9Q2znsFAjmv4ua0JQrdpBW18X3YiO69aQm3sK/L7gm6sKhhV36zLnwUXXDbT5nsNeayEN7Aset9Habr5lwmSKwqXReIIQFequmrndGCODzTb3KJWaZUZ2hKHltCTQBpqbbXmjLHsGATMw+mxTqGCzIr90/obHeraZhMR8H12CnM5POr55cmhvSON1pewOpQKzQ1X+UWcUXehk13V2mY/QuV7qDC51Bld0+g+wuXp+m9v/s7l+fpvjb/jxOu3j9M/cxWZfP7b7BQ==&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g12"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <path
+       id="path6"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ffffff"
+       d="M 40 20 L 70 30 L 40 40 L 10 30 Z" />
+    <path
+       id="path8"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ffffff"
+       d="M 40 40 L 70 50 L 40 60 L 10 50 Z" />
+    <path
+       id="path10"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#ff0000"
+       fill="#ffffff"
+       d="M 40 60 L 70 70 L 40 80 L 10 70 Z" />
+  </g>
+</svg>

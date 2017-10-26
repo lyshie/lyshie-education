@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg14"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7ZbBbqMwEIafhmsEdpq2x4Ztdg+tVCmHPTswAauGQcYppE+/Nh4HUBLtHpo91YfI/DNje/7PiEQ8rfqfWjTlK+agIhbnfcR/RIw9LB/trxOOXriLV14otMy9lIzCVn4CiTGpB5lDO0s0iMrIZi5mWNeQmZkmtMZunrZHNd+1EQWcCdtMqHP1t8xNSW2x+1H/BbIow87Jihreiey90Hioab+I8f0wfLgSYS1qtC1Fjt1E4s8RTzWi8bOqT0E5a4Ntvm5zJXo6t4ba/EsB8wUfQh0gnHg4lzkGL4ZuwOUnEV93pTSwbUTmop2Fb7XSVIrCrdH4Dikq1EM1j4dxigQ3Xe5eKjXJ3NiRplanI4E20F9tKzmZZe8gYAVGH20KFdxz4kH3jz2Q392EJknlFGRMoqALVJyWHk20E/Lxsqf875665qS9bi9iB+oNW2kk1ja0Q2Owsh6EhCclCxcweNHoYCd3Sikat3zVF+6dXOxEK7NFJz7AGrUe3sR44RJHoLEv8zfQPWRYyYzmF/BsrANru3ouLYcQq7GGa+SHgq/guZzz5Oyc5yo558m+AOfyG+fNccb/D+fdN86b41zeDKd9HD+OQ2zyB4Q//wE=&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="g12"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect4"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <path
+       id="path6"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#0000ff"
+       fill="#ffffff"
+       d="M 10 43 Q 20.17 37.6 30.33 43 Q 40.5 48.4 50.67 43 Q 60.83 37.6 71 43 L 71 57 Q 60.83 51.6 50.67 57 Q 40.5 62.4 30.33 57 Q 20.17 51.6 10 57 Z" />
+    <path
+       id="path8"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#0000ff"
+       fill="#ffffff"
+       d="M 10 23 Q 20.17 17.6 30.33 23 Q 40.5 28.4 50.67 23 Q 60.83 17.6 71 23 L 71 37 Q 60.83 31.6 50.67 37 Q 40.5 42.4 30.33 37 Q 20.17 31.6 10 37 Z" />
+    <path
+       id="path10"
+       pointer-events="none"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke="#0000ff"
+       fill="#ffffff"
+       d="M 10 63 Q 20.17 57.6 30.33 63 Q 40.5 68.4 50.67 63 Q 60.83 57.6 71 63 L 71 77 Q 60.83 71.6 50.67 77 Q 40.5 82.4 30.33 77 Q 20.17 71.6 10 77 Z" />
+  </g>
+</svg>

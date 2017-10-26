@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg15"
+   style="background-color: rgb(255, 255, 255);"
+   content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36&quot; version=&quot;7.6.1&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;rVRNc4MgEP013hES21xrY3vpKYeeKW6UKYpDSDX99UVZ/BiTmXQme3Dg7S7svrcYsbTq3gxvyg+dg4ooybuIvUaUPm927tsDFw9sSeKBwsjcQ/EEHOQvIEgQPcscTotAq7WyslmCQtc1CLvAuDG6XYYdtVre2vACVsBBcLVGP2VuS2yLPk34O8iiDDfHCTb8xcV3YfS5xvsiyo6DeXfFw1nY6KnkuW5nENtHLDVaW7+quhRUT22gzedlN7xj3QZqe08C9Qk/XJ0hVDzUZS+Bi6Eb6OPjiL20pbRwaLjova0T32GlrRS6T9bob0i10mbIZmSw0RPY7GOPUqlZZOYsTR2OJYGx0N1sKx7JcjMIugJrLi4EE9wE+hScvzjZ+n07UxMlKOdCEgQ5DlAxHj2R6BbI43VO2aM5DTPS0yh0JQWur5KdZfeSPUQWhufSsXrtFG4EPs0teZAuO7bQhZLNSpeErnUJFP5DFredntHgm/2q2P4P&lt;/diagram&gt;&lt;/mxfile&gt;"
+   version="1.1"
+   height="101px"
+   width="81px">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7">
+    <linearGradient
+       id="mx-gradient-ffffff-1-ff0000-1-s-0"
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%">
+      <stop
+         id="stop2"
+         style="stop-color:#FFFFFF"
+         offset="0%" />
+      <stop
+         id="stop4"
+         style="stop-color:#FF0000"
+         offset="100%" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g13"
+     transform="translate(0.5,0.5)">
+    <rect
+       id="rect9"
+       pointer-events="none"
+       stroke="#000000"
+       fill="#ffffff"
+       ry="12"
+       rx="12"
+       height="100"
+       width="80"
+       y="0"
+       x="0" />
+    <rect
+       id="rect11"
+       pointer-events="none"
+       stroke="#ff0000"
+       fill="url(#mx-gradient-ffffff-1-ff0000-1-s-0)"
+       ry="11"
+       rx="11"
+       height="22"
+       width="62"
+       y="39"
+       x="9" />
+  </g>
+</svg>
