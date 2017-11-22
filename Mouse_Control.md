@@ -25,6 +25,6 @@
 # 放輕鬆
 - [立體連鎖](http://mypuzzle.org/interlocked)
 - [找出20個壽司](http://armorgames.com/play/18083/cat-in-japan)
-- [填色遊戲](http://www.hoodamath.com/games/floodfill.html)
+- [填色遊戲](http://www.gimme5games.com/playgame/222)
 - [Androidify](https://www.androidify.com/)
 - [Numpty Physics 物理遊戲](https://lgdb.org/game/numpty_physics)
