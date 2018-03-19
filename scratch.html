@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Scratch 專案列表</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/superhero/bootstrap.css" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="scratch">
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        function redirect_dr_scratch(pid) {
+            $('<form>', {
+                method: 'post',
+                action: 'http://www.drscratch.org/show_dashboard',
+            }).append($('<input name="urlProject">').val('https://scratch.mit.edu/projects/' + pid)).submit();
+        }
+
+        function update_scratch(username, offset, limit) {
+            $.ajax({
+                url: "https://api.scratch.mit.edu/users/" + username + "/projects?offset=" + offset + "&limit=" + limit,
+                jsonp: "callback",
+                dataType: "json",
+                async: false,
+                data: {
+                    diagnostics: false,
+                    format: "json"
+                },
+                success: function(response) {
+                    $.each(response, function(key, item) {
+                        var thumb = $('<img class="rounded border border-primary">');
+                        $(thumb).attr("src", item.image).attr("width", "128");
+
+                        var title = $('<h5 class="mt-0">');
+                        $(title).append(item.title);
+
+                        var user = $('<a class="btn btn-info btn-sm">');
+                        $(user).attr('href', '?username=' + username).attr("target", "_blank").text(username);
+
+                        var project = $('<a class="btn btn-light btn-sm">');
+                        $(project).attr("href", "https://scratch.mit.edu/projects/" + item.id + "/").attr("target", "_blank").append('開啟');
+
+                        var analyze = $('<a class="btn btn-light btn-sm">');
+                        $(analyze).attr("href", 'javascript:redirect_dr_scratch("' + item.id + '");').attr("target", "_blank").append('分析');
+
+
+                        var div = $('<div class="media col-md-4">');
+                        $(div).append(thumb).append($('<div class="media-body text-truncate">').append(title, user, "<br>", project, analyze, "<br>", item.description));
+                        $("#scratch").append(div);
+                    });
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            var url = new URL(location);
+            var username = url.searchParams.get('username');
+            var pid = url.searchParams.get('pid');
+
+            if (username) {
+                update_scratch(username, 0, 40);
+            } else {
+                $.each([1, 2, 3, 4], function(key_class, item_class) {
+                    for (var n = 1; n <= 30; n++) {
+                        var num = (n < 10) ? '0' + n : n;
+                        update_scratch('twchps50' + item_class + num, 0, 40);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
