@@ -16,8 +16,10 @@
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js"></script>
     <script type="text/javascript">
         function update_scratch(username, offset, limit) {
             $.ajax({
@@ -47,13 +49,13 @@
                             $(title).text(item.title);
 
                             // 作者
-                            var user = $('<a class="btn btn-info btn-sm" target="_blank">');
+                            var user = $('<a class="x-username btn btn-info btn-sm" target="_blank">');
                             $(user).attr({
                                 'href': '?username=' + username
                             }).text(username);
 
                             // 專案連結
-                            var project = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            var project = $('<a class="x-project btn btn-light btn-sm" target="_blank">');
                             $(project).attr({
                                 "href": "https://scratch.mit.edu/projects/" + item.id + "/#fullscreen"
                             }).text('開啟');
@@ -61,17 +63,30 @@
                             var sulfurous = $('<a class="btn btn-light btn-sm" target="_blank">');
                             $(sulfurous).attr({
                                 "href": "https://sulfurous.aau.at/html/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Sulfurous');
+                            }).text('開啟 S');
 
                             var phosphorus = $('<a class="btn btn-light btn-sm" target="_blank">');
                             $(phosphorus).attr({
                                 "href": "https://phosphorus.github.io/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Phosphorus');
+                            }).text('開啟 P');
+
+                            // 統計資訊
+                            var views = $('<span class="badge badge-dark">');
+                            $(views).text(item.stats.views);
+
+                            var loves = $('<span class="badge badge-danger">');
+                            $(loves).text(item.stats.loves);
+
+                            var favorites = $('<span class="badge badge-info">');
+                            $(favorites).text(item.stats.favorites);
 
                             // 專案
                             var div = $('<div class="media col-sm-6 col-md-4">');
                             $(div).append(thumb).append(
-                                $('<div class="media-body text-truncate">').append(title, user, project, $("<p>").append(sulfurous, phosphorus))
+                                $('<div class="media-body text-truncate">').append(title, user, project,
+                                    $('<p class="m-0 p-0">').append(sulfurous, phosphorus),
+                                    $('<p class="m-0 p-0">').append(views, loves, favorites)
+                                )
                             );
 
                             // 加入一筆專案
@@ -86,11 +101,12 @@
         }
 
         $(document).ready(function() {
+            // 參數
             var url = new URL(location);
             var username = url.searchParams.get('username');
             var pid = url.searchParams.get('pid');
 
-            if (username) {
+            if (username) { // 指定使用者
                 update_scratch(username, 0, 40);
             } else {
                 // 進學國小 twchps50101 ~ 50430
@@ -101,6 +117,12 @@
                     }
                 });
             }
+
+            // 最後全部載入
+            $(document).ajaxStop(function() {
+                // 排序
+                tinysort($('#scratch>div'), '.x-username', '.x-project');
+            });
         });
     </script>
 </body>
