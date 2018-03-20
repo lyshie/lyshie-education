@@ -18,6 +18,13 @@
 - [銷毀](https://previews.envatousercontent.com/files/233115027/index.html)
 - [河內塔](http://preview.codecanyon.net/item/towers-of-hanoi-html5-canvas-game/full_screen_preview/20574251)
 - [七段顯示器模擬器](http://www.uize.com/examples/seven-segment-display.html)
+- [Ortho Robot](http://stabyourself.net/orthorobot/)
+
+# 繪圖創作
+- [Avatar Maker (建立虛擬頭像)](http://avatarmaker.com/)
+
+# 語音辨識
+- [Web Speech API Demonstration](https://www.google.com/intl/en/chrome/demos/speech.html)
 
 # 遊戲來源
 - [HTML5 Games from CodeCanyon](https://codecanyon.net/category/html5/games)
@@ -29,3 +36,4 @@
 - [Androidify](https://www.androidify.com/)
 - [Numpty Physics 物理遊戲](https://lgdb.org/game/numpty_physics)
 - [填色繪圖](http://picti.co/)
+- [Google 聖誕老人追蹤器](https://santatracker.google.com/intl/zh-TW/village.html)
