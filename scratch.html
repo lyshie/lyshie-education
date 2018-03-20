@@ -14,46 +14,73 @@
         <div class="row" id="scratch">
         </div>
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript">
-        function redirect_dr_scratch(pid) {
-            $('<form>', {
-                method: 'post',
-                action: 'http://www.drscratch.org/show_dashboard',
-            }).append($('<input name="urlProject">').val('https://scratch.mit.edu/projects/' + pid)).submit();
-        }
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
         function update_scratch(username, offset, limit) {
             $.ajax({
-                url: "https://api.scratch.mit.edu/users/" + username + "/projects?offset=" + offset + "&limit=" + limit,
-                jsonp: "callback",
+                url: "https://api.scratch.mit.edu/users/" + username + "/projects",
                 dataType: "json",
                 data: {
-                    diagnostics: false,
+                    offset: offset,
+                    limit: limit,
                     format: "json"
                 },
                 success: function(response) {
-                    $.each(response, function(key, item) {
-                        var thumb = $('<img class="rounded border border-primary">');
-                        $(thumb).attr("src", item.image).attr("width", "128");
+                    if (response && response.length > 0) {
+                        $.each(response, function(key, item) {
+                            console.log(offset);
 
-                        var title = $('<h5 class="mt-0">');
-                        $(title).append(item.title);
+                            // 縮圖
+                            var thumb = $('<img class="align-self-center border border-primary">');
+                            $(thumb).attr({
+                                "src": item.image,
+                                "width": "128",
+                                "data-toggle": "tooltip",
+                                "title": item.title
+                            }).tooltip();
 
-                        var user = $('<a class="btn btn-info btn-sm">');
-                        $(user).attr('href', '?username=' + username).attr("target", "_blank").text(username);
+                            // 專案標題
+                            var title = $('<h6 class="">');
+                            $(title).text(item.title);
 
-                        var project = $('<a class="btn btn-light btn-sm">');
-                        $(project).attr("href", "https://scratch.mit.edu/projects/" + item.id + "/").attr("target", "_blank").append('開啟');
+                            // 作者
+                            var user = $('<a class="btn btn-info btn-sm" target="_blank">');
+                            $(user).attr({
+                                'href': '?username=' + username
+                            }).text(username);
 
-                        var analyze = $('<a class="btn btn-light btn-sm">');
-                        $(analyze).attr("href", 'javascript:redirect_dr_scratch("' + item.id + '");').attr("target", "_blank").append('分析');
+                            // 專案連結
+                            var project = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            $(project).attr({
+                                "href": "https://scratch.mit.edu/projects/" + item.id + "/#fullscreen"
+                            }).text('開啟');
 
+                            var sulfurous = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            $(sulfurous).attr({
+                                "href": "https://sulfurous.aau.at/html/app.html?id=" + item.id + "&full-screen=true"
+                            }).text('Sulfurous');
 
-                        var div = $('<div class="media col-md-4">');
-                        $(div).append(thumb).append($('<div class="media-body text-truncate">').append(title, user, "<br>", project, analyze, "<br>", item.description));
-                        $("#scratch").append(div);
-                    });
+                            var phosphorus = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            $(phosphorus).attr({
+                                "href": "https://phosphorus.github.io/app.html?id=" + item.id + "&full-screen=true"
+                            }).text('Phosphorus');
+
+                            // 專案
+                            var div = $('<div class="media col-sm-6 col-md-4">');
+                            $(div).append(thumb).append(
+                                $('<div class="media-body text-truncate">').append(title, user, project, $("<p>").append(sulfurous, phosphorus))
+                            );
+
+                            // 加入一筆專案
+                            $("#scratch").append(div);
+                        });
+
+                        // 查詢下一頁
+                        update_scratch(username, offset + limit, limit);
+                    }
                 }
             });
         }
@@ -66,6 +93,7 @@
             if (username) {
                 update_scratch(username, 0, 40);
             } else {
+                // 進學國小 twchps50101 ~ 50430
                 $.each([1, 2, 3, 4], function(key_class, item_class) {
                     for (var n = 1; n <= 30; n++) {
                         var num = (n < 10) ? '0' + n : n;
