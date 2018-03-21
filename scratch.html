@@ -45,7 +45,7 @@
                             }).tooltip();
 
                             // 專案標題
-                            var title = $('<h6 class="">');
+                            var title = $('<h6>');
                             $(title).text(item.title);
 
                             // 作者
@@ -55,30 +55,35 @@
                             }).text(username);
 
                             // 專案連結
-                            var project = $('<a class="x-project btn btn-light btn-sm" target="_blank">');
-                            $(project).attr({
+                            var fullscreen = $('<a class="x-project dropdown-item" target="_blank">');
+                            $(fullscreen).attr({
                                 "href": "https://scratch.mit.edu/projects/" + item.id + "/#fullscreen"
-                            }).text('開啟');
+                            }).text('全螢幕開啟');
 
-                            var scratch3 = $('<a class="x-project btn btn-light btn-sm" target="_blank">');
+                            var editor = $('<a class="dropdown-item" target="_blank">');
+                            $(editor).attr({
+                                "href": "https://scratch.mit.edu/projects/" + item.id + "/#editor"
+                            }).text('編輯專案');
+
+                            var scratch3 = $('<a class="dropdown-item" target="_blank">');
                             $(scratch3).attr({
                                 "href": "https://llk.github.io/scratch-gui/#" + item.id
-                            }).html($('<img src="https://llk.github.io/scratch-gui/static/favicon.ico" width="16">'));
+                            }).append($('<img src="https://llk.github.io/scratch-gui/static/favicon.ico" width="16">'), ' Scratch 3');
 
-                            var getsb2 = $('<a class="x-project btn btn-light btn-sm" target="_blank">');
+                            var getsb2 = $('<a class="dropdown-item" target="_blank">');
                             $(getsb2).attr({
                                 "href": "http://getsb2.herokuapp.com/" + item.id
                             }).text('下載');
 
-                            var sulfurous = $('<a class="btn btn-dark btn-sm" target="_blank">');
+                            var sulfurous = $('<a class="dropdown-item" target="_blank">');
                             $(sulfurous).attr({
                                 "href": "https://sulfurous.aau.at/html/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Sul');
+                            }).text('Sulfurous');
 
-                            var phosphorus = $('<a class="btn btn-dark btn-sm" target="_blank">');
+                            var phosphorus = $('<a class="dropdown-item" target="_blank">');
                             $(phosphorus).attr({
                                 "href": "https://phosphorus.github.io/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Pho');
+                            }).text('Phosphorus');
 
                             // 統計資訊
                             var views = $('<span class="badge badge-dark">');
@@ -93,9 +98,18 @@
                             // 專案
                             var div = $('<div class="media col-sm-6 col-md-4">');
                             $(div).append(thumb).append(
-                                $('<div class="media-body text-truncate">').append(title, user, project, getsb2,
-                                    $('<p class="m-0 p-0">').append(scratch3, sulfurous, phosphorus),
-                                    $('<p class="m-0 p-0">').append(views, loves, favorites)
+                                $('<div class="media-body">').append(title, user,
+                                    views, loves, favorites,
+                                    $('<p class="m-0 p-0">').append(
+                                        // dropdown menu
+                                        $('<div class="dropdown">').append(
+                                            $('<button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">').text('選項')
+                                        ).append(
+                                            $('<div class="dropdown-menu">').append(
+                                                fullscreen, editor, getsb2, scratch3, sulfurous, phosphorus
+                                            )
+                                        )
+                                    )
                                 )
                             );
 
