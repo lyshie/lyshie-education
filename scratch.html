@@ -70,15 +70,15 @@
                                 "href": "http://getsb2.herokuapp.com/" + item.id
                             }).text('下載');
 
-                            var sulfurous = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            var sulfurous = $('<a class="btn btn-dark btn-sm" target="_blank">');
                             $(sulfurous).attr({
                                 "href": "https://sulfurous.aau.at/html/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Sulfurous');
+                            }).text('Sul');
 
-                            var phosphorus = $('<a class="btn btn-light btn-sm" target="_blank">');
+                            var phosphorus = $('<a class="btn btn-dark btn-sm" target="_blank">');
                             $(phosphorus).attr({
                                 "href": "https://phosphorus.github.io/app.html?id=" + item.id + "&full-screen=true"
-                            }).text('Phosphorus');
+                            }).text('Pho');
 
                             // 統計資訊
                             var views = $('<span class="badge badge-dark">');
@@ -93,8 +93,8 @@
                             // 專案
                             var div = $('<div class="media col-sm-6 col-md-4">');
                             $(div).append(thumb).append(
-                                $('<div class="media-body text-truncate">').append(title, user, project, scratch3, getsb2,
-                                    $('<p class="m-0 p-0">').append(sulfurous, phosphorus),
+                                $('<div class="media-body text-truncate">').append(title, user, project, getsb2,
+                                    $('<p class="m-0 p-0">').append(scratch3, sulfurous, phosphorus),
                                     $('<p class="m-0 p-0">').append(views, loves, favorites)
                                 )
                             );
