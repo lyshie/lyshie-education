@@ -65,6 +65,11 @@
                                 "href": "https://llk.github.io/scratch-gui/#" + item.id
                             }).html($('<img src="https://llk.github.io/scratch-gui/static/favicon.ico" width="16">'));
 
+                            var getsb2 = $('<a class="x-project btn btn-light btn-sm" target="_blank">');
+                            $(getsb2).attr({
+                                "href": "http://getsb2.herokuapp.com/" + item.id
+                            }).text('下載');
+
                             var sulfurous = $('<a class="btn btn-light btn-sm" target="_blank">');
                             $(sulfurous).attr({
                                 "href": "https://sulfurous.aau.at/html/app.html?id=" + item.id + "&full-screen=true"
@@ -88,7 +93,7 @@
                             // 專案
                             var div = $('<div class="media col-sm-6 col-md-4">');
                             $(div).append(thumb).append(
-                                $('<div class="media-body text-truncate">').append(title, user, project, scratch3,
+                                $('<div class="media-body text-truncate">').append(title, user, project, scratch3, getsb2,
                                     $('<p class="m-0 p-0">').append(sulfurous, phosphorus),
                                     $('<p class="m-0 p-0">').append(views, loves, favorites)
                                 )
