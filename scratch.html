@@ -20,6 +20,7 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
     <script type="text/javascript">
         function update_scratch(username, offset, limit) {
             $.ajax({
@@ -35,6 +36,14 @@
                         $.each(response, function(key, item) {
                             console.log(offset);
 
+                            // 修改時間 (五天內修改的作品最熱門，些微時間誤差不考慮)
+                            var hot = false;
+                            var current = moment().subtract(5, 'days');
+                            var mod = moment(item.history.modified);
+                            if (mod > current) {
+                                hot = true;
+                            }
+
                             // 縮圖
                             var thumb = $('<img class="align-self-center border border-primary">');
                             $(thumb).attr({
@@ -49,7 +58,13 @@
                             $(title).text(item.title);
 
                             // 作者
-                            var user = $('<a class="x-username btn btn-info btn-sm" target="_blank">');
+                            var user;
+                            if (hot) {
+                                user = $('<a class="x-username btn btn-warning btn-sm" target="_blank">');
+                            } else {
+                                user = $('<a class="x-username btn btn-info btn-sm" target="_blank">');
+                            }
+
                             $(user).attr({
                                 'href': '?username=' + username
                             }).text(username);
