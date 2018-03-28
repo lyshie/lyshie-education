@@ -22,6 +22,7 @@
 - [小數加法](http://www.sheppardsoftware.com/mathgames/decimals/matchingDecimalsAdd.htm)
 
 ## 幾何
+- [誰的三角形比較多？](https://cardgames.io/triangles/)
 - [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
 - [三角形組合](https://nrich.maths.org/5942)
 - [三角形邊長組合](https://www.pbslearningmedia.org/resource/mgbh.math.g.linktriangle/constructing-triangles/#.WWHyhnV941I)
