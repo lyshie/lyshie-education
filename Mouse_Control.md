@@ -20,6 +20,9 @@
 - [七段顯示器模擬器](http://www.uize.com/examples/seven-segment-display.html)
 - [Ortho Robot](http://stabyourself.net/orthorobot/)
 
+# 動動腦
+- [TetraVex](http://www.freewebarcade.com/html5/tetravex/index.html)
+
 # 繪圖創作
 - [Avatar Maker (建立虛擬頭像)](http://avatarmaker.com/)
 
