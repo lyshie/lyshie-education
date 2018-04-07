@@ -22,6 +22,7 @@
 
 # 動動腦
 - [TetraVex](http://www.freewebarcade.com/html5/tetravex/index.html)
+- [Scratch 拼圖](https://scratch.mit.edu/projects/17176145/#player)
 
 # 繪圖創作
 - [Avatar Maker (建立虛擬頭像)](http://avatarmaker.com/)
