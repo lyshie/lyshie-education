@@ -24,6 +24,36 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.plugins.min.js"></script>
     <script type="text/javascript">
+        // 參數
+        var url = new URL(location);
+
+        // 使用者名稱 twchps50101
+        var username = url.searchParams.get('username');
+
+        // 使用者名稱中的「前綴字樣」
+        // twchps   + [501, 502, 503, 504]
+        // twchps5  + [ 01,  02,  03,  04]
+        // twchps50 + [  1,   2,   3,   4]
+        var prefix = url.searchParams.get('prefix');
+        prefix = prefix ? prefix : 'twchps50';
+
+        // 使用者名稱中的「班級字樣」
+        // [501, 502, 503, 504]
+        // [ 01,  02,  03,  04]
+        // [  1,   2,   3,   4]
+        var classes = url.searchParams.get('classes');
+        classes = classes ? classes : '1,2,3,4';
+
+        // 使用者名稱中的「編號字樣」
+        // 30 即 1 ~ 30
+        var count = url.searchParams.get('count');
+        count = new Number(count ? count : '30');
+
+        // 篩選出特定的專案名稱 (共同 Remix 的樹根)
+        var root = url.searchParams.get('root');
+        root = root ? root : '.*';
+        var regexp_root = new RegExp(root, "g");
+
         function update_scratch(username, offset, limit) {
             $.ajax({
                 url: "https://api.scratch.mit.edu/users/" + username + "/projects",
@@ -37,6 +67,10 @@
                     if (response && response.length > 0) {
                         $.each(response, function(key, item) {
                             console.log(offset);
+
+                            // 篩選出共同 Remix 的樹根
+                            if (!("" + item.remix.root).match(regexp_root))
+                                return;
 
                             // 修改時間 (五天內修改的作品最熱門，些微時間誤差不考慮)
                             var hot = false;
@@ -142,19 +176,16 @@
         }
 
         $(document).ready(function() {
-            // 參數
-            var url = new URL(location);
-            var username = url.searchParams.get('username');
-            var pid = url.searchParams.get('pid');
-
             if (username) { // 指定使用者
                 update_scratch(username, 0, 40);
             } else {
                 // 進學國小 twchps50101 ~ 50430
-                $.each([1, 2, 3, 4], function(key_class, item_class) {
-                    for (var n = 1; n <= 30; n++) {
+                // {prefix} + {item_class} + {num}
+                // twchps50   1              01
+                $.each(classes.split(/\s*,\s*/), function(key_class, item_class) {
+                    for (var n = 1; n <= count; n++) {
                         var num = (n < 10) ? '0' + n : n;
-                        update_scratch('twchps50' + item_class + num, 0, 40);
+                        update_scratch(prefix + item_class + num, 0, 40);
                     }
                 });
             }
