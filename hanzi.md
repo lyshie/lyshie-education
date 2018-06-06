@@ -4,7 +4,7 @@
 - [全字庫中文標準交換碼 CNS11643](http://www.cns11643.gov.tw/)
 - [SVG 漢字](https://svghanzi.appspot.com/)
   - ⿰ LR (左右)
-  - ⿱ UD (上下))
+  - ⿱ UD (上下)
   - ⿲ LCR (左中右)
   - ⿳ UCD (上中下)
   - ⿴ S (口)
