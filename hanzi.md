@@ -22,8 +22,9 @@
   - ⿺ SLD (左下口) ![⿷廴彡.svg](https://svghanzi.appspot.com/⿷廴彡?fontfamily=serif&fontsize=24)
   - ⿻ OV (重疊) ![⿷丨彡.svg](https://svghanzi.appspot.com/⿷丨彡?fontfamily=serif&fontsize=24)
   - △ TR (三角) ![△彡彡彡.svg](https://svghanzi.appspot.com/△彡彡彡?fontfamily=serif&fontsize=24)
-- [動態組字服務測試](https://zh.wikisource.org/wiki/User:Shoichi#.E6.90.AD.E8.BC.89.E6.96.BCmediawiki.E4.B8.8A.E7.9A.84.E6.B8.AC.E8.A9.A6)
-- ![⿰文彡](https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體)
-- ![⿰文彡.svg](https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體)
-- ![⿰文彡.png](https://tools.wmflabs.org/idsgen/⿰文彡.png?字體=楷體)
+###
+[動態組字服務測試](https://zh.wikisource.org/wiki/User:Shoichi#.E6.90.AD.E8.BC.89.E6.96.BCmediawiki.E4.B8.8A.E7.9A.84.E6.B8.AC.E8.A9.A6)
+- <img src="https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體" width="24">
+- <img src="https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體" width="24">
+- <img src="https://tools.wmflabs.org/idsgen/⿰文彡.png?字體=楷體" width="24">
 - ![⿰文彡.svg](https://svghanzi.appspot.com/⿰文彡?fontfamily=DFKai-SB&fontsize=128)
