@@ -24,7 +24,6 @@
   - △ TR (三角) ![△彡彡彡.svg](https://svghanzi.appspot.com/△彡彡彡?fontfamily=serif&fontsize=24)
 ###
 [動態組字服務測試](https://zh.wikisource.org/wiki/User:Shoichi#.E6.90.AD.E8.BC.89.E6.96.BCmediawiki.E4.B8.8A.E7.9A.84.E6.B8.AC.E8.A9.A6)
-- <img src="https://tools.wmflabs.org/idsgen/⿱文彡.png" width="24">
 - 可以遞迴組字，<img src="https://tools.wmflabs.org/idsgen/⿺辶⿴宀⿱珤⿰隹⿰貝招.png" width="24">
 - 字型格式 (`.png` 或 `.svg`)
 - 字型名稱 (`字體={楷體, 楷體粗體, 宋體, 宋體粗體}`)
