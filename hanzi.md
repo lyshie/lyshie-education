@@ -3,6 +3,8 @@
 ## 資源
 - [全字庫中文標準交換碼 CNS11643](http://www.cns11643.gov.tw/)
 - [SVG 漢字](https://svghanzi.appspot.com/)
+  - 字型大小 (fontsize=64)
+  - 字型名稱 (fontfamily=英文字型名稱，如「教育部標準楷書」英文名稱為「CMEXKai」)
   - ⿰ LR (左右)
   - ⿱ UD (上下)
   - ⿲ LCR (左中右)
