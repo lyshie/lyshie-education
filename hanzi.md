@@ -26,8 +26,8 @@
 [動態組字服務測試](https://zh.wikisource.org/wiki/User:Shoichi#.E6.90.AD.E8.BC.89.E6.96.BCmediawiki.E4.B8.8A.E7.9A.84.E6.B8.AC.E8.A9.A6)
 - <img src="https://tools.wmflabs.org/idsgen/⿱文彡.png" width="24">
 - 可以遞迴組字，<img src="https://tools.wmflabs.org/idsgen/⿺辶⿴宀⿱珤⿰隹⿰貝招.png" width="24">
-- 字型大小 (`fontsize=64`)
-- 字型名稱 (`fontfamily=英文字型名稱`，如「教育部標準楷書」英文名稱為「CMEXKai」)
+- 字型格式 (`.png` 或 `.svg`)
+- 字型名稱 (`字體={楷體, 楷體粗體, 宋體, 宋體粗體}`)
 - 文字部件
   - ⿰ LR (左右) <img src="https://tools.wmflabs.org/idsgen/⿰文彡.png" width="24">
   - ⿱ UD (上下) <img src="https://tools.wmflabs.org/idsgen/⿱文彡.png" width="24">
