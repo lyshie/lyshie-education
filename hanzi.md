@@ -24,4 +24,21 @@
   - △ TR (三角) ![△彡彡彡.svg](https://svghanzi.appspot.com/△彡彡彡?fontfamily=serif&fontsize=24)
 ###
 [動態組字服務測試](https://zh.wikisource.org/wiki/User:Shoichi#.E6.90.AD.E8.BC.89.E6.96.BCmediawiki.E4.B8.8A.E7.9A.84.E6.B8.AC.E8.A9.A6)
-- <img src="https://tools.wmflabs.org/idsgen/⿰文彡.png?字體=楷體" width="24">
+- <img src="https://tools.wmflabs.org/idsgen/⿱文彡.png" width="24">
+- 可以遞迴組字，<img src="https://tools.wmflabs.org/idsgen/⿺辶⿴宀⿱珤⿰隹⿰貝招.png" width="24">
+- 字型大小 (`fontsize=64`)
+- 字型名稱 (`fontfamily=英文字型名稱`，如「教育部標準楷書」英文名稱為「CMEXKai」)
+- 文字部件
+  - ⿰ LR (左右) <img src="https://tools.wmflabs.org/idsgen/⿰文彡.png" width="24">
+  - ⿱ UD (上下) <img src="https://tools.wmflabs.org/idsgen/⿱文彡.png" width="24">
+  - ⿲ LCR (左中右) <img src="https://tools.wmflabs.org/idsgen/⿲文彡文.png" width="24">
+  - ⿳ UCD (上中下) <img src="https://tools.wmflabs.org/idsgen/⿳文彡文.png" width="24">
+  - ⿴ S (口) <img src="https://tools.wmflabs.org/idsgen/⿴口彡.png" width="24">
+  - ⿵ SU (上口) <img src="https://tools.wmflabs.org/idsgen/⿵門彡.png" width="24">
+  - ⿶ SD (下口) <img src="https://tools.wmflabs.org/idsgen/⿶凵彡.png" width="24">
+  - ⿷ SL (左口) <img src="https://tools.wmflabs.org/idsgen/⿷匚彡.png" width="24">
+  - ⿸ SLU (左上口) <img src="https://tools.wmflabs.org/idsgen/⿷虍彡.png" width="24">
+  - ⿹ SRU (右上口) <img src="https://tools.wmflabs.org/idsgen/⿷气彡.png" width="24">
+  - ⿺ SLD (左下口) <img src="https://tools.wmflabs.org/idsgen/⿷廴彡.png" width="24">
+  - ⿻ OV (重疊) <img src="https://tools.wmflabs.org/idsgen/⿷丨彡.png" width="24">
+  - △ TR (三角) <img src="https://tools.wmflabs.org/idsgen/△彡彡彡.png" width="24">
