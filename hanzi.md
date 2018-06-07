@@ -20,3 +20,4 @@
 - ![⿰文彡](https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體)
 - [⿰文彡.svg](https://tools.wmflabs.org/idsgen/⿰文彡.svg?字體=楷體)
 - [⿰文彡.png](https://tools.wmflabs.org/idsgen/⿰文彡.png?字體=楷體)
+- [⿰文彡.svg](https://svghanzi.appspot.com/%E2%BF%B0%E6%96%87%E5%BD%A1?fontfamily=DFKai-SB&fontsize=128)
