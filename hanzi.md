@@ -41,3 +41,6 @@
   - ⿺ SLD (左下口) <img src="https://tools.wmflabs.org/idsgen/⿷廴彡.png" width="24">
   - ⿻ OV (重疊) <img src="https://tools.wmflabs.org/idsgen/⿷丨彡.png" width="24">
   - △ TR (三角) <img src="https://tools.wmflabs.org/idsgen/△彡彡彡.png" width="24">
+
+## 參考網站
+- [Chinese character description language](https://en.wikipedia.org/wiki/Chinese_character_description_language)
