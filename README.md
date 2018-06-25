@@ -86,6 +86,12 @@
 - [填色遊戲](http://www.hoodamath.com/games/floodfill.html)
 - [Earth-Picker 看街景猜地方](http://www.earth-picker.com/)
 
+## 數學活動
+- [Back2Back](https://logicroots.com/MathBlog/back-2-back-math-game/)
+- [Tic Tac Toe for Three Equations in a Row!](https://www.education.com/activity/article/Tic_Tac_Toe_fifth/)
+- [A Rapid Rounding Game](https://www.education.com/activity/article/six_tricks_practice_math_third/)
+- [Guess The Number Math Game](https://logicroots.com/MathBlog/math-activities-guess-the-number/)
+
 ## 數學文獻
 - [小數乘法的學與教](http://www.sec.ntnu.edu.tw/Monthly/96(296-305)/297-pdf/05.pdf)
 - [What Makes Learning Fractions So Hard? (part 1)](http://www.cne.psychol.cam.ac.uk/math-memory/what-makes-learning-fractions-so-hard-part-1)
