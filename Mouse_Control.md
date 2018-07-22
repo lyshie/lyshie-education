@@ -34,6 +34,7 @@
 - [HTML5 Games from CodeCanyon](https://codecanyon.net/category/html5/games)
 
 # 放輕鬆
+- [紅色方塊脫逃](https://www.mathplayground.com/logicgames/red_block_escape/logic_red_block_escape.html)
 - [立體連鎖](http://mypuzzle.org/interlocked)
 - [找出20個壽司](http://armorgames.com/play/18083/cat-in-japan)
 - [填色遊戲](http://www.gimme5games.com/playgame/222)
