@@ -33,3 +33,7 @@ body { background: #fff; }
 .node img {
     margin-right:  10px;
 }
+
+#root {
+    background-color: #ffffcc !important;
+}

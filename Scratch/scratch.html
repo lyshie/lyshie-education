@@ -118,8 +118,8 @@
 
                             var scratch3 = $('<a class="dropdown-item" target="_blank">');
                             $(scratch3).attr({
-                                "href": "https://llk.github.io/scratch-gui/#" + item.id
-                            }).append($('<img src="https://llk.github.io/scratch-gui/static/favicon.ico" width="16">'), ' Scratch 3');
+                                "href": "https://beta.scratch.mit.edu/#" + item.id
+                            }).append($('<img src="https://beta.scratch.mit.edu/static/favicon.ico" width="16">'), ' Scratch 3');
 
                             var getsb2 = $('<a class="dropdown-item" target="_blank">');
                             $(getsb2).attr({
@@ -146,6 +146,11 @@
                             var favorites = $('<span class="badge badge-info">');
                             $(favorites).text(item.stats.favorites);
 
+                            var fork = $('<a class="dropdown-item" target="_blank">');
+                            $(fork).attr({
+                                "href": "fork.html?project=" + item.id
+                            }).text('Fork');
+
                             // 專案
                             var div = $('<div class="media col-sm-6 col-md-4">');
                             $(div).append(thumb).append(
@@ -157,7 +162,7 @@
                                             $('<button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">').text('選項')
                                         ).append(
                                             $('<div class="dropdown-menu">').append(
-                                                fullscreen, editor, getsb2, scratch3, sulfurous, phosphorus
+                                                fullscreen, editor, getsb2, scratch3, sulfurous, phosphorus, fork
                                             )
                                         )
                                     )
