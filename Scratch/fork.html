@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="treant-js/Treant.css" type="text/css" />
+    <link rel="stylesheet" href="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css" type="text/css" />
+    <link rel="stylesheet" href="fork.css" type="text/css" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <div id="tree-canvas"></div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="treant-js/vendor/raphael.js"></script>
+    <script type="text/javascript" src="treant-js/Treant.js"></script>
+    <script type="text/javascript" src="treant-js/vendor/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <!-- Inline JS -->
+    <script type="text/javascript">
+        jQuery.noConflict();
+        (function($) {
+
+            function getURLParameter(url) {
+                if (url.length < 1) {
+                    console.log('empty url string');
+                    return null
+                }
+
+                var buf = decodeURIComponent(url.substring(1));
+                var tokens = buf.split('&');
+                var params = {};
+
+                tokens.forEach(function(token) {
+                    var tmp = token.split('=');
+                    params[tmp[0]] = tmp[1];
+                });
+
+                console.log(params);
+                return params;
+            }
+
+            function dfs(sub, json, tree) {
+                console.log()
+                $.each(sub['children'], function(key, val) {
+                    console.log(key, val);
+                    var node = {
+                        text: {
+                            title: json[val]['title'],
+                            desc: json[val]['username'],
+                            contact: {
+                                val: val,
+                                href: 'https://scratch.mit.edu/projects/{}/'.replace('{}', val),
+                                target: '_blank'
+                            }
+                        },
+                        image: 'https://cdn2.scratch.mit.edu/get_image/project/{}_60x45.png?'.replace('{}', val),
+                        children: []
+                    };
+                    tree['children'].push(node);
+                    dfs(json[val], json, node);
+                });
+            }
+
+            $(function() {
+                // parameters
+                console.log(window.location.search);
+                params = getURLParameter(window.location.search);
+
+                if (params['project']) {
+                    console.log('yes');
+                    $.ajax({
+                        url: 'https://scratch.mit.edu/projects/{}/remixtree/bare/'.replace('{}', params['project']),
+                        type: 'GET',
+                        crossOrigin: true,
+                        dataType: "json",
+                        success: function(json) {
+                            console.log(json);
+                            var root = json['root_id'];
+                            var tree = {
+                                text: {
+                                    title: json[root]['title'],
+                                    desc: json[root]['username'],
+                                    contact: {
+                                        val: root,
+                                        href: 'https://scratch.mit.edu/projects/{}/'.replace('{}', root),
+                                        target: '_blank'
+                                    }
+                                },
+                                image: 'https://cdn2.scratch.mit.edu/get_image/project/{}_60x45.png?'.replace('{}', root),
+                                HTMLid: 'root',
+                                children: []
+                            };
+
+                            dfs(json[root], json, tree);
+
+                            // config
+                            var chart_config = {
+                                chart: {
+                                    container: '#tree-canvas',
+                                    levelSeparation: 25,
+                                    siblingSeparation: 5,
+                                    connectors: {
+                                        type: 'step'
+                                    },
+                                    node: {
+                                        HTMLclass: 'node'
+                                    },
+                                    rootOrientation: 'WEST'
+                                },
+                                nodeStructure: tree
+                            };
+
+                            // main
+                            var chart = new Treant(chart_config,
+                                function() {
+                                    $(document).scrollTop($("#root").offset().top);
+                                }, $);
+                        }
+                    });
+                } else {
+                    console.log('no');
+                }
+
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>

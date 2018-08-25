@@ -1,0 +1,6 @@
+[submodule "moedict-data"]
+	path = moedict-data
+	url = https://github.com/g0v/moedict-data
+[submodule "Scratch/treant-js"]
+	path = Scratch/treant-js
+	url = https://github.com/fperucic/treant-js
