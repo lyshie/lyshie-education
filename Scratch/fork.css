@@ -37,3 +37,9 @@ body { background: #fff; }
 #root {
     background-color: #ffffcc !important;
 }
+
+.cb {
+    border-radius: 16px;
+    border: 1px solid #73AD21;
+    margin: 8px;
+}
