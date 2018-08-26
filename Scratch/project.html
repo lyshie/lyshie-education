@@ -52,13 +52,17 @@
 
             function render_scripts(json) {
                 if ('scripts' in json) {
-                    var docs = scratchblocks.fromJSON(json, scratchblocks.allLanguages['zh_TW']);
+                    var docs = scratchblocks.fromJSON(json, scratchblocks.allLanguages['en']);
 
                     $.each(docs.scripts, function(key, val) {
                         var doc = new scratchblocks.Document([val]);
+
+                        var code = $('<pre class="cb">').text(doc.stringify());
+                        doc.translate(scratchblocks.allLanguages['zh_TW']);
+
                         doc.render(function(svg) {
                             var cb = $('<div class="cb" id="cb_{}">'.replace(key));
-                            $(cb).append($('<div>').html(json['objName']), svg);
+                            $(cb).append($('<div>').html(json['objName']), svg, code);
                             $('#code').append(cb);
                         });
                     });

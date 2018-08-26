@@ -38,8 +38,16 @@ body { background: #fff; }
     background-color: #ffffcc !important;
 }
 
-.cb {
+div.cb {
     border-radius: 16px;
     border: 1px solid #73AD21;
     margin: 8px;
+	padding: 8px;
+}
+
+pre.cb {
+    border-radius: 8px;
+    border: 1px solid #73AD21;
+    margin: 8px;
+	padding: 8px;
 }
