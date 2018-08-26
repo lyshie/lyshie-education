@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="treant-js/Treant.css" type="text/css" />
+    <link rel="stylesheet" href="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css" type="text/css" />
+    <link rel="stylesheet" href="fork.css" type="text/css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        iframe {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            border: 0;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .row {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <div class="row">
+        <div class="column" id="parent"><span id="prj_parent"></span><iframe class="code" id="frame_parent" frameborder="0" height="100%" width="100%"></iframe></div>
+        <div class="column" id="child"><span id="prj_child"></span><iframe class="code" id="frame_child" frameborder="0" height="100%" width="100%"></iframe></div>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="treant-js/vendor/raphael.js"></script>
+    <script type="text/javascript" src="treant-js/Treant.js"></script>
+    <script type="text/javascript" src="treant-js/vendor/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <!-- Inline JS -->
+    <script type="text/javascript">
+        jQuery.noConflict();
+        (function($) {
+            function getURLParameter(url) {
+                if (url.length < 1) {
+                    console.log('empty url string');
+                    return null
+                }
+
+                var buf = decodeURIComponent(url.substring(1));
+                var tokens = buf.split('&');
+                var params = {};
+
+                tokens.forEach(function(token) {
+                    var tmp = token.split('=');
+                    params[tmp[0]] = tmp[1];
+                });
+
+                console.log(params);
+                return params;
+            }
+
+            $(function() {
+                // parameters
+                console.log(window.location.search);
+                params = getURLParameter(window.location.search);
+
+                if (params['project']) {
+                    console.log('yes');
+                    $.ajax({
+                        url: 'https://scratch.mit.edu/projects/{}/remixtree/bare/'.replace('{}', params['project']),
+                        type: 'GET',
+                        crossOrigin: true,
+                        dataType: "json",
+                        success: function(json) {
+                            var child = params['project'];
+                            var root = json[child]['parent_id'];
+
+                            if (root && (root != child)) {
+                                $('#frame_parent').attr('src', 'project.html?project={}'.replace('{}', root));
+                                $('#frame_child').attr('src', 'project.html?project={}'.replace('{}', child));
+
+                                $('#prj_parent').html($('<a>').attr('href', 'diff.html?project={}'.replace('{}', root)).text(root));
+                                $('#prj_child').html($('<a>').attr('href', 'diff.html?project={}'.replace('{}', child)).text(child));
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            alert(errorThrown);
+                        }
+                    });
+                } else {
+                    console.log('no');
+                }
+
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
