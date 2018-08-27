@@ -4,3 +4,6 @@
 [submodule "Scratch/treant-js"]
 	path = Scratch/treant-js
 	url = https://github.com/fperucic/treant-js
+[submodule "Scratch/JavaScript-MD5"]
+	path = Scratch/JavaScript-MD5
+	url = https://github.com/blueimp/JavaScript-MD5

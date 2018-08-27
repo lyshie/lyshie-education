@@ -7,8 +7,6 @@
     <title></title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="treant-js/Treant.css" type="text/css" />
-    <link rel="stylesheet" href="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css" type="text/css" />
     <link rel="stylesheet" href="fork.css" type="text/css" />
     <style>
         html,
@@ -59,15 +57,50 @@
 
     <!-- JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="treant-js/vendor/raphael.js"></script>
-    <script type="text/javascript" src="treant-js/Treant.js"></script>
-    <script type="text/javascript" src="treant-js/vendor/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 
     <!-- Inline JS -->
     <script type="text/javascript">
         jQuery.noConflict();
         (function($) {
+            var tID = 0;
+            var signatures = {
+                'frame_parent': [],
+                'frame_child': []
+            };
+            tID = setInterval(function() {
+                var len = $('.finished').length;
+                if (len > 1) {
+                    clearInterval(tID);
+                    var common = $.grep(signatures['frame_parent'], function(element) {
+                        return $.inArray(element, signatures['frame_child']) !== -1;
+                    });
+
+                    console.log(common);
+                    $.each(common, function(k, v) {
+                        $('#frame_parent, #frame_child').contents().find('div#' + v).css('opacity', '0.5');
+                    });
+                }
+            }, 100);
+
+            $('#frame_parent, #frame_child').on('load', function() {
+                var myself = $(this);
+                var timerID = 0;
+
+                timerID = setInterval(function() {
+                    var len = $(myself).contents().find('.finished').length;
+                    if (len > 0) {
+                        clearInterval(timerID);
+                        $('body').append($('<span class="finished">'));
+                        //$(myself).contents().find('.signature').css('background-color', 'red');
+                        $.each($(myself).contents().find('.signature'), function(k, v) {
+                            var id = $(myself).attr('id');
+                            var sig = $(v).text();
+                            signatures[id].push(sig);
+                        });
+                    }
+                }, 50);
+            });
+
             function getURLParameter(url) {
                 if (url.length < 1) {
                     console.log('empty url string');

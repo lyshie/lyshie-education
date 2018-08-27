@@ -7,26 +7,20 @@
     <title></title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="treant-js/Treant.css" type="text/css" />
-    <link rel="stylesheet" href="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css" type="text/css" />
     <link rel="stylesheet" href="fork.css" type="text/css" />
 </head>
 
 <body>
     <!-- HTML -->
-    <div id="tree-canvas"></div>
+    <div id="code"></div>
 
     <!-- JS -->
     <script type="text/javascript" src="https://scratchblocks.github.io/js/scratchblocks-v3.1-min.js"></script>
     <script type="text/javascript" src="https://scratchblocks.github.io/js/translations-all-v3.1-min.js" charset="utf8"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="treant-js/vendor/raphael.js"></script>
-    <script type="text/javascript" src="treant-js/Treant.js"></script>
-    <script type="text/javascript" src="treant-js/vendor/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="JavaScript-MD5/js/md5.min.js"></script>
 
     <!-- Inline JS -->
-    <div id="code"></div>
     <script type="text/javascript">
         jQuery.noConflict();
         (function($) {
@@ -57,12 +51,16 @@
                     $.each(docs.scripts, function(key, val) {
                         var doc = new scratchblocks.Document([val]);
 
-                        var code = $('<pre class="cb">').text(doc.stringify());
+                        var text_code = doc.stringify();
+                        var hash_code = md5(text_code);
+
+                        var signature = $('<pre class="signature">').text(hash_code);
+                        var code = $('<pre class="cb">').text(text_code);
                         doc.translate(scratchblocks.allLanguages['zh_TW']);
 
                         doc.render(function(svg) {
-                            var cb = $('<div class="cb" id="cb_{}">'.replace(key));
-                            $(cb).append($('<div>').html(json['objName']), svg, code);
+                            var cb = $('<div class="cb" id="{}">'.replace('{}', hash_code));
+                            $(cb).append($('<div>').html(json['objName']), svg, signature, code);
                             $('#code').append(cb);
                         });
                     });
@@ -89,6 +87,7 @@
                         dataType: "json",
                         success: function(json) {
                             render_scripts(json);
+                            $('body').append($('<span class="finished">'));
                         },
                         error: function(jqXHR, textStatus, errorThrown) {
                             alert(errorThrown);
