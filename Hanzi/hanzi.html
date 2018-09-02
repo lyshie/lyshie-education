@@ -76,6 +76,7 @@
                 console.log(Number(hanzi_char.charCodeAt(0)).toString(10));
 
                 var hex_code = Number(hanzi_char.charCodeAt(0)).toString(16);
+                var code_point = Number(hanzi_char.codePointAt(0)).toString(16);
 
                 var hei = $('<span class="hei">').text(hanzi_char);
                 var kai = $('<span class="kai">').text(hanzi_char);
@@ -92,7 +93,9 @@
                     }).text(m4808);
                     $(one_char).addClass('bg-light');
                 } else {
-                    $(moe).text('非教育部常用字');
+                    $(moe).attr({
+                        "href": "https://www.cns11643.gov.tw/search.jsp?ID=7&cPage=1&SN={}".replace('{}', code_point)
+                    }).text('全字庫中文標準交換碼');
                     $(one_char).addClass('bg-warning');
                 }
 
