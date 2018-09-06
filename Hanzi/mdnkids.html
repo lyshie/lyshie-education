@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>國語日報網址查詢</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/superhero/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="control-label" for="datetimepicker">選擇日期：</label>
+                    <input id="datetimepicker" class="form-control" type="text" placeholder="請選擇日期...">
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div>國語日報網址：<a id="url" target="_blank"></a></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.datetimepicker.setLocale('zh-TW');
+
+            //             http://ereading.mdnkids.com/images/ebooks/uploads/D20180905/D20180905_ebook/assets/basic-html/toc.html
+            var mdnkids = 'http://ereading.mdnkids.com/images/ebooks/uploads/D{}/D{}_ebook/assets/basic-html/toc.html';
+
+            $('#datetimepicker').datetimepicker({
+                maxDate: 0,
+                timepicker: false,
+                onSelectDate: function(dp, $input) {
+                    var dt = ('' + $input.val()).replace(/\s.+/g, '').replace(/\//g, '');
+                    var url = mdnkids.replace(/{}/g, dt);
+                    $('#url').attr('href', url).text(url);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
