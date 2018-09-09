@@ -44,3 +44,8 @@
 
 ## 參考網站
 - [Chinese character description language](https://en.wikipedia.org/wiki/Chinese_character_description_language)
+- [ACCESS 全漢字檢索系統](http://huayutools.mtc.ntnu.edu.tw/mtchanzi/index.aspx)
+- [中研院文國尋寶記同義反義詞遊戲](http://proj1.sinica.edu.tw/~swjz/Dictionary/sym-asym-demo.html)
+- [東東同義詞詞典](http://www.kwuntung.net/synonym/)
+- [大家活用國語教材庫](https://market.cloud.edu.tw/content/primary/chinese/tp_sd/200006edu/home.htm)
+- [部件查詢](http://char.ndap.org.tw/test/eric/eCard/CharRootSearch.aspx)
