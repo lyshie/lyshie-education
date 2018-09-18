@@ -52,7 +52,7 @@
                         var doc = new scratchblocks.Document([val]);
 
                         var text_code = doc.stringify();
-                        var hash_code = md5(text_code);
+                        var hash_code = md5(json['objName'] + text_code);
 
                         var signature = $('<pre class="signature">').text(hash_code);
                         var code = $('<pre class="cb">').text(text_code);

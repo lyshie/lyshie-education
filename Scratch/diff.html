@@ -96,6 +96,13 @@
                             var id = $(myself).attr('id');
                             var sig = $(v).text();
                             signatures[id].push(sig);
+
+							// lyshie_20180919: sync view
+                            $(v).click(function() {
+                                $('#frame_parent, #frame_child').contents().scrollTop(
+                                    $(myself).contents().find('.cb[id={}]'.replace('{}', sig)).offset().top
+                                );
+                            });
                         });
                     }
                 }, 50);
