@@ -67,10 +67,14 @@
                 'frame_parent': [],
                 'frame_child': []
             };
+
             tID = setInterval(function() {
                 var len = $('.finished').length;
+                // lyshie_20180919: both two frames finished loading
                 if (len > 1) {
                     clearInterval(tID);
+
+                    // find common code blocks
                     var common = $.grep(signatures['frame_parent'], function(element) {
                         return $.inArray(element, signatures['frame_child']) !== -1;
                     });
@@ -90,18 +94,37 @@
                     var len = $(myself).contents().find('.finished').length;
                     if (len > 0) {
                         clearInterval(timerID);
+                        // lyshie_20180919: after loading all code blocks, add a 'finished' element at the bottom of page to each frame
                         $('body').append($('<span class="finished">'));
                         //$(myself).contents().find('.signature').css('background-color', 'red');
-                        $.each($(myself).contents().find('.signature'), function(k, v) {
+
+                        $.each($(myself).contents().find('div.cb'), function(k, v) {
+                            // either 'frame_parent' or 'frame_child'
                             var id = $(myself).attr('id');
-                            var sig = $(v).text();
+                            // hash code
+                            var sig = $(v).attr('id');
+                            // push signatures into signatures['frame_parent'] or signatures['frame_child']
                             signatures[id].push(sig);
 
-							// lyshie_20180919: sync view
-                            $(v).click(function() {
-                                $('#frame_parent, #frame_child').contents().scrollTop(
-                                    $(myself).contents().find('.cb[id={}]'.replace('{}', sig)).offset().top
+                            // lyshie_20180919: sync view 'div.cb'
+                            $(v).on('mouseover', function() {
+                                // scroll self frame (code block)
+                                $(myself).contents().scrollTop(
+                                    $(this).offset().top
                                 );
+
+                                // scroll another frame (code block)
+                                if (id == 'frame_parent') {
+                                    var target = $('#frame_child').contents().find('.cb[id={}]'.replace('{}', sig)).offset();
+                                    if (target) {
+                                        $('#frame_child').contents().scrollTop(target.top);
+                                    }
+                                } else { // 'frame_child'
+                                    var target = $('#frame_parent').contents().find('.cb[id={}]'.replace('{}', sig)).offset();
+                                    if (target) {
+                                        $('#frame_parent').contents().scrollTop(target.top);
+                                    }
+                                }
                             });
                         });
                     }

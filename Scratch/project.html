@@ -48,10 +48,24 @@
                 if ('scripts' in json) {
                     var docs = scratchblocks.fromJSON(json, scratchblocks.allLanguages['en']);
 
-                    $.each(docs.scripts, function(key, val) {
+                    // sorted by script content
+                    $.each(docs.scripts.sort(function(x, y) {
+                        // heavy load
+                        var a = (new scratchblocks.Document([x])).stringify();
+                        var b = (new scratchblocks.Document([y])).stringify();
+
+                        if (a < b) {
+                            return -1
+                        } else if (a > b) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    }), function(key, val) {
                         var doc = new scratchblocks.Document([val]);
 
                         var text_code = doc.stringify();
+                        // 'objName' + [script content]
                         var hash_code = md5(json['objName'] + text_code);
 
                         var signature = $('<pre class="signature">').text(hash_code);
@@ -67,7 +81,17 @@
                 }
 
                 if ('children' in json) {
-                    $.each(json.children, function(k, v) {
+                    // sorted by 'objName'
+                    $.each(json.children.sort(function(x, y) {
+                        if (x['objName'] < y['objName']) {
+                            return -1
+                        } else if (x['objName'] > y['objName']) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    }), function(k, v) {
+                        // recursive render
                         render_scripts(v);
                     });
                 }
