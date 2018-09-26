@@ -42,3 +42,6 @@
 - [Numpty Physics 物理遊戲](https://lgdb.org/game/numpty_physics)
 - [填色繪圖](http://picti.co/)
 - [Google 聖誕老人追蹤器](https://santatracker.google.com/intl/zh-TW/village.html)
+
+# 流體力學
+- [Ribka](http://ribka.me/)
