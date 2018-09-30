@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>語詞測驗</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/superhero/bootstrap.css" media="screen">
+    <style>
+        .hei {
+            font-family: 'Noto Sans CJK TC', 'Noto Sans CJK';
+            font-size: 32pt;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .kai {
+            font-family: 'CMEXKai', '教育部標準楷書', '全字庫正楷體', '全字庫正楷體 Plus', '全字庫正楷體 Ext-B';
+            font-size: 64pt;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .ming {
+            font-family: 'CMEXSong', 'CMEXSongUN', '教育部標準宋體', '教育部標準宋體UN', '全字庫正宋體', '全字庫正宋體 Plus', '全字庫正宋體 Ext-B';
+            font-size: 32pt;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .pic {
+            width: 64px;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .media {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+            </div>
+            <div class="col-md-4 col-lg-4 text-center text-warning">
+                <span id="answer" class="kai"></span>
+            </div>
+        </div>
+        <div class="row" id="quiz">
+            <div class="col-xs-3 col-ms-3 col-md-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+            </div>
+            <div class="col-md-4 col-lg-4 text-center">
+                <button type="button" class="btn btn-primary btn-md" id="show">顯示答案</button>
+                <button type="button" class="btn btn-default btn-md" id="next">下一題</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js"></script>
+    <script type="text/javascript" src="quiz_prefix.js"></script>
+    <script type="text/javascript" src="quiz_suffix.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var len = quiz_prefix.length;
+
+            $('#show').on('click', function() {
+                $('#answer').show();
+            });
+
+            $('#next').on('click', function() {
+                // randomize quiz
+                var j = Math.floor(Math.random() * len);
+
+                var quiz_str = quiz_prefix[j];
+                var quiz = quiz_str.split(' ');
+
+                // randomize quiz options
+                quiz.sort(function(a, b) {
+                    return Math.random() - 0.5;
+                });
+
+                var prefix = quiz[0][0];
+                var options = quiz.slice(0, 4).map(function(item) {
+                    return item[1];
+                });
+
+                $('#answer').hide().text(prefix);
+
+                $('#quiz').empty();
+                $.each(options, function(key, value) {
+                    $('#quiz').append($('<div class="col-xs-3 col-ms-3 col-md-3 text-center">').append($('<span class="kai">').text(value)));
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
