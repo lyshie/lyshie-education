@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
+echo 'var quiz_suffix = ['
 for c in $(head -n 300 bigram_suffix | grep -oP '\p{Han}'); do
-	p=$(grep -oP "\p{Han}${c}" BIAU2.UTF8 | head -n 8 | xargs)
-	echo "${p}"
+	p=$(grep -oP "\p{Han}${c}" bigrams | head -n 8 | xargs)
+	echo "    '${p}',"
 done
+echo '];'
