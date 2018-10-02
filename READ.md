@@ -14,3 +14,7 @@
 
 ## 語言
 - [Free Text to Speech Online with Natural Voices](https://www.naturalreaders.com/online/)
+
+## 台語
+- [iTaigi 愛台語](https://itaigi.tw/)
+- [臺灣閩南語常用詞辭典](https://twblg.dict.edu.tw/)
