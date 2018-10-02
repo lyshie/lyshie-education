@@ -10,21 +10,21 @@
     <style>
         .hei {
             font-family: 'Noto Sans CJK TC', 'Noto Sans CJK';
-            font-size: 32pt;
+            font-size: 10vw;
             padding-left: 6px;
             padding-right: 6px;
         }
 
         .kai {
             font-family: 'CMEXKai', '教育部標準楷書', '全字庫正楷體', '全字庫正楷體 Plus', '全字庫正楷體 Ext-B';
-            font-size: 64pt;
+            font-size: 10vw;
             padding-left: 6px;
             padding-right: 6px;
         }
 
         .ming {
             font-family: 'CMEXSong', 'CMEXSongUN', '教育部標準宋體', '教育部標準宋體UN', '全字庫正宋體', '全字庫正宋體 Plus', '全字庫正宋體 Ext-B';
-            font-size: 32pt;
+            font-size: 10vw;
             padding-left: 6px;
             padding-right: 6px;
         }
@@ -45,9 +45,9 @@
 <body>
     <div class="container">
         <div class="row" id="word">
-            <div class="col-md-5 col-lg-5">
+            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4">
             </div>
-            <div class="col-md-2 col-lg-2 text-center text-warning">
+            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4 text-center text-warning">
                 <span id="answer" class="kai"></span>
                 <div class="form-group">
                     <input id="guess" type="text" class="text-center form-control kai" placeholder="" size="1" maxlength="1" />
@@ -55,13 +55,15 @@
             </div>
         </div>
         <div class="row" id="quiz">
-            <div class="col-xs-3 col-ms-3 col-md-3">
+            <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1">
+            </div>
+            <div id="option" class="col-xs-10 col-ms-10 col-md-10 col-lg-10 text-center">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-lg-4">
+            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4">
             </div>
-            <div class="col-md-4 col-lg-4 text-center">
+            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4 text-center">
                 <button type="button" class="btn btn-default btn-md" id="show">顯示答案</button>
                 <button type="button" class="btn btn-success btn-md" id="next">下一題</button>
             </div>
@@ -91,7 +93,7 @@
                 }
             });
 
-            $('#next').on('click', function() {
+            function showQuiz() {
                 // randomize quiz
                 var j = Math.floor(Math.random() * len);
 
@@ -116,9 +118,9 @@
                 $('#guess').val('').removeClass('text-danger text-success').focus();
                 $('#answer').hide().text(word);
 
-                $('#quiz').empty();
+                $('#option').empty();
                 $.each(options, function(key, value) {
-                    $('#quiz').append($('<div class="col-xs-3 col-ms-3 col-md-3 text-center">').append($('<span class="kai">').text(value)));
+                    $('#option').append($('<span class="kai">').text(value));
                 });
 
                 // lyshie_20181003: swap DOM elements
@@ -127,6 +129,10 @@
                 } else {
                     $("#word").before($("#quiz"));
                 }
+            }
+
+            $('#next').on('click', function() {
+                showQuiz();
             });
 
             $('#guess').on('keypress', function(e) {
