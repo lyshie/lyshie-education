@@ -44,11 +44,14 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-lg-4">
+        <div class="row" id="word">
+            <div class="col-md-5 col-lg-5">
             </div>
-            <div class="col-md-4 col-lg-4 text-center text-warning">
+            <div class="col-md-2 col-lg-2 text-center text-warning">
                 <span id="answer" class="kai"></span>
+                <div class="form-group">
+                    <input id="guess" type="text" class="text-center form-control kai" placeholder="" size="1" maxlength="1" />
+                </div>
             </div>
         </div>
         <div class="row" id="quiz">
@@ -59,8 +62,8 @@
             <div class="col-md-4 col-lg-4">
             </div>
             <div class="col-md-4 col-lg-4 text-center">
-                <button type="button" class="btn btn-primary btn-md" id="show">顯示答案</button>
-                <button type="button" class="btn btn-default btn-md" id="next">下一題</button>
+                <button type="button" class="btn btn-default btn-md" id="show">顯示答案</button>
+                <button type="button" class="btn btn-success btn-md" id="next">下一題</button>
             </div>
         </div>
     </div>
@@ -75,17 +78,29 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            var len = quiz_prefix.length;
+            var len = Math.min(quiz_prefix.length, quiz_suffix.length);
 
             $('#show').on('click', function() {
-                $('#answer').show();
+                var answer = $('#answer').text();
+                var guess = $('#guess').val();
+
+                if (answer === guess) {
+                    var guess = $('#guess').val(answer).addClass('text-success');
+                } else if (answer !== guess) {
+                    var guess = $('#guess').val(answer).addClass('text-danger');
+                }
             });
 
             $('#next').on('click', function() {
                 // randomize quiz
                 var j = Math.floor(Math.random() * len);
 
-                var quiz_str = quiz_prefix[j];
+                // lyshie_20181003: random choose 'prefix' or 'suffix'
+                var is_prefix = (Math.random() < 0.5) ? true : false;
+
+                var quiz_str = is_prefix ? quiz_prefix[j] : quiz_suffix[j];
+                console.log(quiz_str);
+
                 var quiz = quiz_str.split(' ');
 
                 // randomize quiz options
@@ -93,18 +108,34 @@
                     return Math.random() - 0.5;
                 });
 
-                var prefix = quiz[0][0];
+                var word = is_prefix ? quiz[0][0] : quiz[0][1];
                 var options = quiz.slice(0, 4).map(function(item) {
-                    return item[1];
+                    return is_prefix ? item[1] : item[0];
                 });
 
-                $('#answer').hide().text(prefix);
+                $('#guess').val('').removeClass('text-danger text-success').focus();
+                $('#answer').hide().text(word);
 
                 $('#quiz').empty();
                 $.each(options, function(key, value) {
                     $('#quiz').append($('<div class="col-xs-3 col-ms-3 col-md-3 text-center">').append($('<span class="kai">').text(value)));
                 });
+
+                // lyshie_20181003: swap DOM elements
+                if (is_prefix) {
+                    $("#quiz").before($("#word"));
+                } else {
+                    $("#word").before($("#quiz"));
+                }
             });
+
+            $('#guess').on('keypress', function(e) {
+                if (e.which == 13) {
+                    $('#show').trigger('click');
+                }
+            });
+
+            $('#next').trigger('click');
         });
     </script>
 </body>
