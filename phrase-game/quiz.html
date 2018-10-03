@@ -44,28 +44,36 @@
 
 <body>
     <div class="container">
+        <!-- 字首或字尾-->
         <div class="row" id="word">
             <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4">
             </div>
-            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4 text-center text-warning">
+            <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4 text-center">
+                <!-- 暫存答案 -->
                 <span id="answer" class="kai"></span>
+                <!-- 輸入答案的區域 -->
                 <div class="form-group">
-                    <input id="guess" type="text" class="text-center form-control kai" placeholder="" size="1" maxlength="1" />
+                    <input id="guess" type="text" class="text-center form-control-lg kai" placeholder="？" size="1" maxlength="1" />
                 </div>
             </div>
         </div>
-        <div class="row" id="quiz">
+
+        <!-- 可能的字詞 -->
+        <div class="row" id="phrases">
             <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1">
             </div>
-            <div id="option" class="col-xs-10 col-ms-10 col-md-10 col-lg-10 text-center">
+            <!-- 四個詞組 -->
+            <div class="col-xs-10 col-ms-10 col-md-10 col-lg-10 text-center" id="option">
             </div>
         </div>
+
+        <!-- 按鈕 -->
         <div class="row">
             <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4">
             </div>
             <div class="col-xs-4 col-ms-4 col-md-4 col-lg-4 text-center">
-                <button type="button" class="btn btn-default btn-md" id="show">顯示答案</button>
-                <button type="button" class="btn btn-success btn-md" id="next">下一題</button>
+                <button type="button" class="btn btn-default btn-md" id="show_answer">顯示答案</button>
+                <button type="button" class="btn btn-success btn-md" id="next_quiz">下一題</button>
             </div>
         </div>
     </div>
@@ -73,26 +81,29 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js"></script>
     <script type="text/javascript" src="quiz_prefix.js"></script>
     <script type="text/javascript" src="quiz_suffix.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
+            // 取得題庫數量 min(字首, 字尾)
             var len = Math.min(quiz_prefix.length, quiz_suffix.length);
 
-            $('#show').on('click', function() {
-                var answer = $('#answer').text();
-                var guess = $('#guess').val();
+            // 顯示答案
+            function showAnswer() {
+                var answer = $('#answer').text(); // 答案
+                var guess = $('#guess').val(); // 回答
 
                 if (answer === guess) {
+                    // 猜對
                     var guess = $('#guess').val(answer).addClass('text-success');
-                } else if (answer !== guess) {
+                } else {
+                    // 猜錯
                     var guess = $('#guess').val(answer).addClass('text-danger');
                 }
-            });
+            }
 
+            // 顯示題目
             function showQuiz() {
                 // randomize quiz
                 var j = Math.floor(Math.random() * len);
@@ -100,9 +111,11 @@
                 // lyshie_20181003: random choose 'prefix' or 'suffix'
                 var is_prefix = (Math.random() < 0.5) ? true : false;
 
+                // true => 字首, false => 字尾
                 var quiz_str = is_prefix ? quiz_prefix[j] : quiz_suffix[j];
                 console.log(quiz_str);
 
+                // 拆出所有選項 '國小 國家 國內 國際 國中 國外 國會 國王'
                 var quiz = quiz_str.split(' ');
 
                 // randomize quiz options
@@ -110,14 +123,21 @@
                     return Math.random() - 0.5;
                 });
 
+                // [0]  0    1    2    3    4    5    6    7
+                //      國小 國家 國內 國際 國中 國外 國會 國王
+                // [0]  0 1  0 1  0 1  0 1  0 1  0 1  0 1  0 1
                 var word = is_prefix ? quiz[0][0] : quiz[0][1];
                 var options = quiz.slice(0, 4).map(function(item) {
                     return is_prefix ? item[1] : item[0];
                 });
 
-                $('#guess').val('').removeClass('text-danger text-success').focus();
+                // 移除「對」或「錯」的標示
+                $('#guess').val('').removeClass('text-success text-danger').focus();
+
+                // 隱藏暫存的答案
                 $('#answer').hide().text(word);
 
+                // 重新設定選項
                 $('#option').empty();
                 $.each(options, function(key, value) {
                     $('#option').append($('<span class="kai">').text(value));
@@ -125,25 +145,40 @@
 
                 // lyshie_20181003: swap DOM elements
                 if (is_prefix) {
-                    $("#quiz").before($("#word"));
+                    $("#phrases").before($("#word"));
                 } else {
-                    $("#word").before($("#quiz"));
+                    $("#word").before($("#phrases"));
                 }
 
+                // 設定預設焦點，方便輸入
                 $('#guess').focus();
             }
 
-            $('#next').on('click', function() {
-                showQuiz();
+            // 顯示答案
+            $('#show_answer').on('click', function() {
+                showAnswer();
             });
 
-            $('#guess').on('keypress', function(e) {
-                if (e.which == 13) {
-                    $('#show').trigger('click');
+            // 下一題，先檢查
+            $('#next_quiz').on('click', function() {
+                var checked = $('#guess').hasClass('text-danger') ||
+                    $('#guess').hasClass('text-success');
+
+                if (checked) {
+                    showQuiz();
+                } else {
+                    showAnswer();
                 }
             });
 
-            $('#next').trigger('click');
+            // 按 Enter 就換下一題
+            $('#guess').on('keypress', function(e) {
+                if (e.which == 13) {
+                    $('#next_quiz').trigger('click');
+                }
+            });
+
+            showQuiz();
         });
     </script>
 </body>
