@@ -21,6 +21,9 @@
 - [小數加法](http://www.mathplayground.com/ASB_Hungry_Puppies_Decimals.html)
 - [小數加法](http://www.sheppardsoftware.com/mathgames/decimals/matchingDecimalsAdd.htm)
 
+## 直式計算
+- [直式除法 (Long Division) 學習單產生器](https://themathworksheetsite.com/long_division.html)
+
 ## 幾何
 - [誰的三角形比較多？](https://cardgames.io/triangles/)
 - [Geoboard](https://www.mathlearningcenter.org/resources/apps/geoboard)
