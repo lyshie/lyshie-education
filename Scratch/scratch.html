@@ -116,11 +116,6 @@
                                 "href": "https://scratch.mit.edu/projects/" + item.id + "/#editor"
                             }).text('編輯專案');
 
-                            var scratch3 = $('<a class="dropdown-item" target="_blank">');
-                            $(scratch3).attr({
-                                "href": "https://beta.scratch.mit.edu/#" + item.id
-                            }).append($('<img src="https://scratch.mit.edu/favicon.ico" width="16">'), ' Scratch 3');
-
                             var getsb2 = $('<a class="dropdown-item" target="_blank">');
                             $(getsb2).attr({
                                 "href": "http://getsb2.herokuapp.com/" + item.id
@@ -167,7 +162,7 @@
                                             $('<button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">').text('選項')
                                         ).append(
                                             $('<div class="dropdown-menu">').append(
-                                                fullscreen, editor, getsb2, scratch3, sulfurous, phosphorus, fork, project
+                                                fullscreen, editor, getsb2, sulfurous, phosphorus, fork, project
                                             )
                                         )
                                     )
