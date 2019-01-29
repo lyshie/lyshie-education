@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Scratch 帳號清單檢查</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/superhero/bootstrap.css"
+        media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="alert alert-danger" role="alert">
+                    僅適用於建立學生帳號前，檢查帳號清單是否連續可用！
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="30" id="bulk" placeholder="username1&#x0a;username2&#x0a;username3&#x0a;..."></textarea>
+                    <button type="button" class="btn" id="check">檢查帳號</button>
+                </div>
+            </div>
+            <div class="col-sm">
+                <table class="table table-bordered table-striped tablesorter" id="result_table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.js"></script>
+
+    <script type="text/javascript">
+        function check_username(username)
+        {
+            // 避免快取
+            var ts = (new Date()).getTime();
+
+            $.ajax(
+            {
+                // lyshie_20181128: 使用 CORS proxy，避免 CORS 問題。
+                url: "https://cors.io/?https://api.scratch.mit.edu/users/" +
+                    username + "?" + $.param(
+                    {
+                        ts: ts,
+                        format: "json"
+                    }),
+                dataType: "json",
+                success: function(response, txt, jqxhr)
+                {
+                    //console.log(response, txt, jqxhr);
+                },
+                error: function(jqxhr, txt)
+                {
+                    //console.log(jqxhr, txt);
+                },
+                complete: function(jqxhr, txt)
+                {
+                    if (txt == "error")
+                    {
+                        // 帳號不存在
+                        $('#result').append(
+                            '<tr>' +
+                            '<td>' + username + '</td>' +
+                            '<td>' + 'OK' + '</td>' +
+                            '</tr>'
+                        );
+                    }
+                    else
+                    {
+                        // 帳號存在
+                        $('#result').append(
+                            '<tr>' +
+                            '<td>' + username + '</td>' +
+                            '<td>' + '帳號存在' + '</td>' +
+                            '</tr>'
+                        );
+                    }
+                }
+            });
+        }
+
+        $(document).ready(function()
+        {
+            $('#check').click(function()
+            {
+                $('#result').empty();
+
+                var users = $('#bulk').val().split(/[\n\r]+/);
+
+                $.each(users, function(k, v)
+                {
+                    if (v)
+                    {
+                        check_username(v);
+                    }
+                });
+            });
+
+            // 最後全部載入
+            $(document).ajaxStop(function()
+            {
+                $('#result_table').tablesorter(
+                {
+                    sortList: [
+                        [0, 0]
+                    ]
+                });
+                $('#result_table').trigger('update');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
