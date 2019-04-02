@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Scratch 專案列表</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/superhero/bootstrap.css" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <div id="title"></div>
+        <div class="row" id="scratch">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.plugins.min.js"></script>
+    <script type="text/javascript">
+        // 參數
+        var url = new URL(location);
+
+        // 創作坊編號
+        var studio = url.searchParams.get('studio');
+
+        function update_scratch(studio) {
+            $('div#title').load("https://cors.io/?https://scratch.mit.edu/studios/" + studio + "/ h2", function() {
+                // 完成載入創作坊標題
+            });
+
+            $.ajax({
+                // lyshie_20181128: 使用 CORS proxy，避免 CORS 問題。
+                url: "https://cors.io/?https://scratch.mit.edu/site-api/projects/in/" + studio + "/1/?" + $.param({
+                    format: "json"
+                }),
+                dataType: "html",
+                success: function(response) {
+                    if (response) {
+                        html = $('<div id="studio">').html(response);
+                        $.each(html.find('li'), function(key, item) {
+                            //console.log(item);
+                            item = $(item);
+
+                            var proj = {
+                                'id':       item.attr('data-id'),
+                                'thumb':    item.find('img').attr('data-original'),
+                                'title':    item.find('.title').text(),
+                                'username': item.find('.owner a').text()
+                            };
+
+                            // 縮圖
+                            var thumb = $('<img class="lazy align-self-center border border-primary">');
+                            $(thumb).attr({
+                                "data-src": 'https:' + proj.thumb,
+                                "width": "128",
+                                "data-toggle": "tooltip",
+                                "title": proj.title
+                            }).tooltip();
+
+                            // 專案標題
+                            var title = $('<h6>');
+                            $(title).text(proj.title)
+
+                            // 作者
+                            var user;
+                            user = $('<a class="x-username btn btn-info btn-sm" target="_blank">');
+
+                            $(user).attr({
+                                'href': './scratch.html?username=' + proj.username
+                            }).text(proj.username);
+
+                            // 專案連結
+                            var fullscreen = $('<a class="x-project dropdown-item" target="_blank">');
+                            $(fullscreen).attr({
+                                "href": "https://scratch.mit.edu/projects/" + proj.id + "/#fullscreen"
+                            }).text('全螢幕開啟');
+
+                            var editor = $('<a class="dropdown-item" target="_blank">');
+                            $(editor).attr({
+                                "href": "https://scratch.mit.edu/projects/" + proj.id + "/#editor"
+                            }).text('編輯專案');
+
+                            var getsb2 = $('<a class="dropdown-item" target="_blank">');
+                            $(getsb2).attr({
+                                "href": "http://getsb2.herokuapp.com/" + proj.id
+                            }).text('下載');
+
+                            var sulfurous = $('<a class="dropdown-item" target="_blank">');
+                            $(sulfurous).attr({
+                                "href": "https://sulfurous.aau.at/html/app.html?id=" + proj.id + "&full-screen=true"
+                            }).text('Sulfurous');
+
+                            var phosphorus = $('<a class="dropdown-item" target="_blank">');
+                            $(phosphorus).attr({
+                                "href": "https://phosphorus.github.io/app.html?id=" + proj.id + "&full-screen=true"
+                            }).text('Phosphorus');
+
+                            var fork = $('<a class="dropdown-item" target="_blank">');
+                            $(fork).attr({
+                                "href": "fork.html?project=" + proj.id
+                            }).text('改編樹');
+
+                            var project = $('<a class="dropdown-item" target="_blank">');
+                            $(project).attr({
+                                "href": "project.html?project=" + proj.id
+                            }).text('比對程式');
+
+                            // 專案
+                            var div = $('<div class="media col-sm-6 col-md-4">');
+                            $(div).append(thumb).append(
+                                $('<div class="media-body">').append(title, user,
+                                    $('<p class="m-0 p-0">').append(
+                                        // dropdown menu
+                                        $('<div class="dropdown">').append(
+                                            $('<button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">').text('選項')
+                                        ).append(
+                                            $('<div class="dropdown-menu">').append(
+                                                fullscreen, editor, getsb2, sulfurous, phosphorus, fork, project
+                                            )
+                                        )
+                                    )
+                                )
+                            );
+
+                            // 加入一筆專案
+                            $("#scratch").append(div);
+                        });
+                    }
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            if (studio) { // 指定使用者
+                update_scratch(studio);
+            }
+
+            // 最後全部載入
+            $(document).ajaxStop(function() {
+                // 排序
+                tinysort($('#scratch>div'), '.x-username', '.x-project');
+
+                // lazy load images
+                $('.lazy').Lazy();
+            });
+        });
+    </script>
+</body>
+
+</html>
