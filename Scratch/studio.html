@@ -14,6 +14,7 @@
         <div id="title"></div>
         <div class="row" id="scratch">
         </div>
+        <div><code>studio.html?title=標題&amp;studio=創作坊編號,創作坊編號,創作坊編號</code></div>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -30,11 +31,17 @@
 
         // 創作坊編號
         var studio = url.searchParams.get('studio');
+        var title = url.searchParams.get('title');
 
         function update_scratch(studio) {
-            $('div#title').load("https://cors.io/?https://scratch.mit.edu/studios/" + studio + "/ h2", function() {
-                // 完成載入創作坊標題
-            });
+            if (title == "") {
+                $('div#title').append($('<div>').attr('id', studio));
+                $('div#title div#' + studio).load("https://cors.io/?https://scratch.mit.edu/studios/" + studio + "/ h2", function() {
+                    // 完成載入創作坊標題
+                });
+            } else {
+                $('div#title').empty().append($('<h2>').text(title));
+            }
 
             $.ajax({
                 // lyshie_20181128: 使用 CORS proxy，避免 CORS 問題。
@@ -50,9 +57,9 @@
                             item = $(item);
 
                             var proj = {
-                                'id':       item.attr('data-id'),
-                                'thumb':    item.find('img').attr('data-original'),
-                                'title':    item.find('.title').text(),
+                                'id': item.attr('data-id'),
+                                'thumb': item.find('img').attr('data-original'),
+                                'title': item.find('.title').text(),
                                 'username': item.find('.owner a').text()
                             };
 
@@ -140,7 +147,17 @@
 
         $(document).ready(function() {
             if (studio) { // 指定使用者
-                update_scratch(studio);
+                if (studio.match(/,/)) {
+                    // 多個創作坊
+                    studio.split(/,/).forEach(function(t) {
+                        if (t) {
+                            update_scratch(t);
+                        }
+                    });
+                } else {
+                    // 一個創作坊
+                    update_scratch(studio);
+                }
             }
 
             // 最後全部載入
