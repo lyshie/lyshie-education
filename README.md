@@ -1,5 +1,8 @@
 # 謝老師蒐集的教育工具
 
+## 邏輯與理解
+- [Math and Logic Problems](https://www.aplusclick.org/)
+
 ## 運算
 - [減法工作表](http://www.math-aids.com/Subtraction/)
 - [除法分配互動教學](https://www.mathsisfun.com/numbers/division.html)
