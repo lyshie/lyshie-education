@@ -56,7 +56,7 @@
             $.ajax(
             {
                 // lyshie_20181128: 使用 CORS proxy，避免 CORS 問題。
-                url: "https://cors.io/?https://api.scratch.mit.edu/users/" +
+                url: "https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/users/" +
                     username + "?" + $.param(
                     {
                         ts: ts,
