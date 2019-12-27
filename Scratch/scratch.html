@@ -57,7 +57,7 @@
         function update_scratch(username, offset, limit) {
             $.ajax({
                 // lyshie_20181128: 使用 CORS proxy，避免 CORS 問題。
-                url: "https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/users/" + username + "/projects?" + $.param({
+                url: "https://scratch.chps.tn.edu.tw/https://api.scratch.mit.edu/users/" + username + "/projects?" + $.param({
                     offset: offset,
                     limit: limit,
                     format: "json"
@@ -116,10 +116,10 @@
                                 "href": "https://scratch.mit.edu/projects/" + item.id + "/#editor"
                             }).text('編輯專案');
 
-                            var getsb2 = $('<a class="dropdown-item" target="_blank">');
-                            $(getsb2).attr({
-                                "href": "http://getsb2.herokuapp.com/" + item.id
-                            }).text('下載');
+                            var code = $('<a class="dropdown-item" target="_blank">');
+                            $(code).attr({
+                                "href": "https://scratch.chps.tn.edu.tw/" + item.id
+                            }).text('文字程式');
 
                             var sulfurous = $('<a class="dropdown-item" target="_blank">');
                             $(sulfurous).attr({
@@ -162,7 +162,7 @@
                                             $('<button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">').text('選項')
                                         ).append(
                                             $('<div class="dropdown-menu">').append(
-                                                fullscreen, editor, getsb2, sulfurous, phosphorus, fork, project
+                                                fullscreen, editor, code, sulfurous, phosphorus, fork, project
                                             )
                                         )
                                     )
