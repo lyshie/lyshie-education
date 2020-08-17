@@ -58,6 +58,7 @@
 - [角度估算 Estimating Angles](https://nrich.maths.org/1235/note)
 - [角度估算遊戲](https://www.mathplayground.com/alienangles.html)
 - [Guess the Angle/Make the Angle](https://www.interactive-maths.com/guess-the-angle-ggb.html)
+- [簡單估算角度](https://www.mathgames.com/skill/4.22-estimate-angle-measurements)
 - [Free Math Apps](https://www.mathlearningcenter.org/resources/apps)
 - [互動數學教學資源](http://www.visnos.com/demos/)
 - [視覺互動三角函數](https://www.visualtrig.com/) 
