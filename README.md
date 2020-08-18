@@ -55,6 +55,8 @@
 - [Acute Angle In Nature](http://online-optiker.info/free/acute-angle-in-nature.asp)
 
 ## 互動教學工具
+- [三角不等式](https://www.geogebra.org/m/JT5UmZ8w)
+- [Virtual Manipulatives](https://www.didax.com/math/virtual-manipulatives.html)
 - [立方體體積與表面積互動操作](https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Cubes/)
 - [體積計算](https://www.mathgames.com/skill/5.120-volume-of-cubes-and-rectangular-prisms)
 - [角度估算 Estimating Angles](https://nrich.maths.org/1235/note)
